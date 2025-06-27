@@ -3,7 +3,7 @@
 .vscode
 **/__pycache__
 **/functions/__pycache__
-**/my-bucket/d880eed3-38c6-4818-a5d5-ca405d68bb2f
-**/my-bucket/unknown
+**/my-bucket/*
 conversation
 minio.exe
+*.env
