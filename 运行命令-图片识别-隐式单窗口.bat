@@ -16,7 +16,7 @@ start "DebugConsole" /B cmd /c "call conda activate D:\chainlit\molmo_env && pyt
 
 REM 启动Chainlit应用（后台运行）使用相同窗口标题
 echo Starting Chainlit app...
-start "DebugConsole" cmd /c "call conda activate D:\chainlit\molmo_env && python -m chainlit run D:\chainlit\chainlit-datalayer\demo_app\app.py --host 192.168.1.55"
+start "DebugConsole" cmd /c "call conda activate D:\chainlit\molmo_env && python -m chainlit run D:\chainlit\chainlit-datalayer\demo_app\app.py"
 
 echo All tasks completed.
 exit
