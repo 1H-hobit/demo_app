@@ -1,0 +1,1398 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d9" for="edge" attr.name="file_path" attr.type="string"/>
+<key id="d8" for="edge" attr.name="source_id" attr.type="string"/>
+<key id="d7" for="edge" attr.name="keywords" attr.type="string"/>
+<key id="d6" for="edge" attr.name="description" attr.type="string"/>
+<key id="d5" for="edge" attr.name="weight" attr.type="double"/>
+<key id="d4" for="node" attr.name="file_path" attr.type="string"/>
+<key id="d3" for="node" attr.name="source_id" attr.type="string"/>
+<key id="d2" for="node" attr.name="description" attr.type="string"/>
+<key id="d1" for="node" attr.name="entity_type" attr.type="string"/>
+<key id="d0" for="node" attr.name="entity_id" attr.type="string"/>
+<graph edgedefault="undirected"><node id="盗墓">
+  <data key="d0">盗墓</data>
+  <data key="d1">category</data>
+  <data key="d2">盗墓是一种进行破坏的技术，古代贵族们建造坟墓时会设置种种机关暗器以防止被盗。</data>
+  <data key="d3">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="古代贵族">
+  <data key="d0">古代贵族</data>
+  <data key="d1">person</data>
+  <data key="d2">古代贵族们建造坟墓时会设置种种机关暗器以防止被盗。</data>
+  <data key="d3">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="坟墓">
+  <data key="d0">坟墓</data>
+  <data key="d1">organization</data>
+  <data key="d2">坟墓是古代贵族们建造的，用于安葬死者的场所，会设置种种机关暗器以防止被盗。</data>
+  <data key="d3">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="机关暗器">
+  <data key="d0">机关暗器</data>
+  <data key="d1">equipment</data>
+  <data key="d2">机关暗器是古代贵族们在坟墓中设置的，用于防止被盗的陷阱。</data>
+  <data key="d3">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="流沙">
+  <data key="d0">流沙</data>
+  <data key="d1">equipment</data>
+  <data key="d2">流沙是一种机关暗器，用于防止盗墓者进入坟墓。</data>
+  <data key="d3">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="毒箭">
+  <data key="d0">毒箭</data>
+  <data key="d1">equipment</data>
+  <data key="d2">毒箭是一种机关暗器，用于防止盗墓者进入坟墓。</data>
+  <data key="d3">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="毒虫">
+  <data key="d0">毒虫</data>
+  <data key="d1">equipment</data>
+  <data key="d2">毒虫是一种机关暗器，用于防止盗墓者进入坟墓。</data>
+  <data key="d3">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="陷坑">
+  <data key="d0">陷坑</data>
+  <data key="d1">equipment</data>
+  <data key="d2">陷坑是一种机关暗器，用于防止盗墓者进入坟墓。</data>
+  <data key="d3">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="八宝转心机关">
+  <data key="d0">八宝转心机关</data>
+  <data key="d1">equipment</data>
+  <data key="d2">八宝转心机关是一种机关暗器，用于防止盗墓者进入坟墓。</data>
+  <data key="d3">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="东陵">
+  <data key="d0">东陵</data>
+  <data key="d1">location</data>
+  <data key="d2">东陵是清代帝陵之一，孙殿英曾经想挖开它用里面的财宝充当军饷。</data>
+  <data key="d3">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="孙殿英">
+  <data key="d0">孙殿英</data>
+  <data key="d1">person</data>
+  <data key="d2">孙殿英是民国时期的大军阀，曾经想挖开东陵用里面的财宝充当军饷。</data>
+  <data key="d3">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="铁钎">
+  <data key="d0">铁钎</data>
+  <data key="d1">equipment</data>
+  <data key="d2">铁钎是一种工具，用于寻找古墓。</data>
+  <data key="d3">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="洛阳铲">
+  <data key="d0">洛阳铲</data>
+  <data key="d1">equipment</data>
+  <data key="d2">洛阳铲是一种工具，用于寻找古墓。</data>
+  <data key="d3">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="竹钉">
+  <data key="d0">竹钉</data>
+  <data key="d1">equipment</data>
+  <data key="d2">竹钉是一种工具，用于寻找古墓。</data>
+  <data key="d3">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="钻地龙">
+  <data key="d0">钻地龙</data>
+  <data key="d1">equipment</data>
+  <data key="d2">钻地龙是一种工具，用于寻找古墓。</data>
+  <data key="d3">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="探阴爪">
+  <data key="d0">探阴爪</data>
+  <data key="d1">equipment</data>
+  <data key="d2">探阴爪是一种工具，用于寻找古墓。</data>
+  <data key="d3">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="黑折子">
+  <data key="d0">黑折子</data>
+  <data key="d1">equipment</data>
+  <data key="d2">黑折子是一种工具，用于寻找古墓。</data>
+  <data key="d3">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="十六字阴阳风水秘术">
+  <data key="d0">十六字阴阳风水秘术</data>
+  <data key="d1">category</data>
+  <data key="d2">《十六字阴阳风水秘术》是一本残书，书中所述多半都是解读墓葬的风水格局之类的独门秘术。</data>
+  <data key="d3">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="胡国华">
+  <data key="d0">胡国华</data>
+  <data key="d1">person</data>
+  <data key="d2">胡国华是故事中的主要人物之一，他的生活经历充满了起伏。胡国华曾是十里八乡有名的大地主，但因为赌博和抽福寿膏（一种类似大烟的毒品）而家业败落，变得贫穷。他后来成为孙先生的徒弟，在孙先生的帮助下成功戒烟，并最终成为一名风水师，在县里给有钱人选墓地，逐渐有了些名气。然而，胡国华的生活并非一帆风顺，他曾是一个大烟鬼，体力很差，因为喝了烧刀子而感到冷汗淋漓。在故事中，胡国华还曾与一只老鼠结为金兰兄弟，老鼠经常叼来银元帮助他。尽管他曾经富裕过，但后来因赌博和酗酒而陷入困境，甚至被迫去抓无辜女子供女尸活吃人心，以逃避舅舅的监督。</data>
+  <data key="d3">chunk-9aa774770b29966a85f28c35f235b371&lt;SEP&gt;chunk-5d945978a9335688cbe9222a26a11de5&lt;SEP&gt;chunk-06d06ff27f6166c34cb3fb0cc4f66b03&lt;SEP&gt;chunk-3eb4bb5b4d59d6d4aa8dca83c37bbba5&lt;SEP&gt;chunk-2a61185ad17a4bd57bb65baaa16a0a96&lt;SEP&gt;chunk-06db17fbb1c4212f20f5d3379033ffbc&lt;SEP&gt;chunk-7be04447fe7c75d6415cbc6c23cba5fa&lt;SEP&gt;chunk-e6da0513b4a90f87b7b70b858eeaefbf&lt;SEP&gt;chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="舅舅">
+  <data key="d0">舅舅</data>
+  <data key="d1">person</data>
+  <data key="d2">胡国华的舅舅知道他是败家子大烟鬼，平时一文钱都不肯给他。&lt;SEP&gt;舅舅是一个人物，他因为胡国华的行为而生病去世。&lt;SEP&gt;舅舅是胡国华的父亲，他来检查外甥媳妇的情况，发现了纸人冒充媳妇的事实。</data>
+  <data key="d3">chunk-3eb4bb5b4d59d6d4aa8dca83c37bbba5&lt;SEP&gt;chunk-7be04447fe7c75d6415cbc6c23cba5fa&lt;SEP&gt;chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="娶媳妇">
+  <data key="d0">娶媳妇</data>
+  <data key="d1">event</data>
+  <data key="d2">胡国华骗舅舅说要娶媳妇，让舅舅给凑点钱。</data>
+  <data key="d3">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="分家">
+  <data key="d0">分家</data>
+  <data key="d1">event</data>
+  <data key="d2">胡国华分到了不少家产，足够衣食无忧的过一辈子。</data>
+  <data key="d3">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="赌博">
+  <data key="d0">赌博</data>
+  <data key="d1">category</data>
+  <data key="d2">赌博是胡国华败家的一个原因。</data>
+  <data key="d3">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="福寿膏">
+  <data key="d0">福寿膏</data>
+  <data key="d1">equipment</data>
+  <data key="d2">福寿膏是一种烟膏，胡国华用它来满足烟瘾。&lt;SEP&gt;福寿膏是一种药物，胡国华用它来治疗抽大烟带来的身体不适。&lt;SEP&gt;福寿膏是一种让人上瘾的毒品，胡国华曾因沾染这种毒品而受到舅舅的警告。&lt;SEP&gt;福寿膏是胡国华抽的大烟。</data>
+  <data key="d3">chunk-5d945978a9335688cbe9222a26a11de5&lt;SEP&gt;chunk-3eb4bb5b4d59d6d4aa8dca83c37bbba5&lt;SEP&gt;chunk-7be04447fe7c75d6415cbc6c23cba5fa&lt;SEP&gt;chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="万贯家财">
+  <data key="d0">万贯家财</data>
+  <data key="d1">category</data>
+  <data key="d2">万贯家财是胡国华败家前拥有的财富。</data>
+  <data key="d3">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="舅舅给拿的钱">
+  <data key="d0">舅舅给拿的钱</data>
+  <data key="d1">category</data>
+  <data key="d2">舅舅给拿的钱是20块大洋，用来给胡国华娶媳妇。</data>
+  <data key="d3">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="胡家祖上">
+  <data key="d0">胡家祖上</data>
+  <data key="d1">person</data>
+  <data key="d2">胡家祖上是十里八乡有名的大地主，最辉煌的时期在城里买了三条胡同相连的四十多间宅子。</data>
+  <data key="d3">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="民国年间">
+  <data key="d0">民国年间</data>
+  <data key="d1">category</data>
+  <data key="d2">民国年间，胡国华家道中落，分了家。</data>
+  <data key="d3">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="三条胡同">
+  <data key="d0">三条胡同</data>
+  <data key="d1">location</data>
+  <data key="d2">三条胡同相连的四十多间宅子是胡家最辉煌时期的宅子。</data>
+  <data key="d3">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="纸人">
+  <data key="d0">纸人</data>
+  <data key="d1">category</data>
+  <data key="d2">纸人是由胡国华找匠人制作的，用来冒充自己娶的媳妇。</data>
+  <data key="d3">chunk-3eb4bb5b4d59d6d4aa8dca83c37bbba5</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="花柳巷">
+  <data key="d0">花柳巷</data>
+  <data key="d1">location</data>
+  <data key="d2">花柳巷是城市中一个不正规的娱乐场所，胡国华在没钱付账后被赶出来，只能在那里过夜。</data>
+  <data key="d3">chunk-3eb4bb5b4d59d6d4aa8dca83c37bbba5</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="白纸人">
+  <data key="d0">白纸人</data>
+  <data key="d1">category</data>
+  <data key="d2">白纸人是纸人的具体形态，由胡国华找匠人制作，用来冒充自己娶的媳妇。</data>
+  <data key="d3">chunk-3eb4bb5b4d59d6d4aa8dca83c37bbba5</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="胡国华的媳妇">
+  <data key="d0">胡国华的媳妇</data>
+  <data key="d1">category</data>
+  <data key="d2">胡国华的媳妇是纸人冒充的，实际并不存在。</data>
+  <data key="d3">chunk-3eb4bb5b4d59d6d4aa8dca83c37bbba5</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="那白纸糊的女人">
+  <data key="d0">那白纸糊的女人</data>
+  <data key="d1">person</data>
+  <data key="d2">那白纸糊的女人是一个虚构的人物，她试图向胡国华求婚。</data>
+  <data key="d3">chunk-7be04447fe7c75d6415cbc6c23cba5fa</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="胡国华的舅舅">
+  <data key="d0">胡国华的舅舅</data>
+  <data key="d1">person</data>
+  <data key="d2">胡国华的舅舅是一个人物，他因为胡国华的行为而生病去世。</data>
+  <data key="d3">chunk-7be04447fe7c75d6415cbc6c23cba5fa</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="十三里铺的荒坟">
+  <data key="d0">十三里铺的荒坟</data>
+  <data key="d1">location</data>
+  <data key="d2">十三里铺的荒坟是一个地方，白纸人提到胡国华可以去那里寻找她的财物。&lt;SEP&gt;十三里铺的荒坟是指胡国华计划去寻找金银首饰的地方。</data>
+  <data key="d3">chunk-06db17fbb1c4212f20f5d3379033ffbc&lt;SEP&gt;chunk-7be04447fe7c75d6415cbc6c23cba5fa</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="那大老鼠">
+  <data key="d0">那大老鼠</data>
+  <data key="d1">animal</data>
+  <data key="d2">那大老鼠是胡国华遇到的一只老鼠，它每天来和胡国华一起吸福寿膏。</data>
+  <data key="d3">chunk-7be04447fe7c75d6415cbc6c23cba5fa</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="檀木箱子">
+  <data key="d0">檀木箱子</data>
+  <data key="d1">equipment</data>
+  <data key="d2">檀木箱子是胡国华母亲的嫁妆，他卖掉了这两块银洋来买烟膏。</data>
+  <data key="d3">chunk-7be04447fe7c75d6415cbc6c23cba5fa</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="王二杠子">
+  <data key="d0">王二杠子</data>
+  <data key="d1">person</data>
+  <data key="d2">王二杠子是一个无赖，胡国华曾经是他的少爷，现在胡国华家业败落，王二杠子幸灾乐祸，经常欺负胡国华。&lt;SEP&gt;王二杠子是胡国华在军队中的同伴，因被胡国华误伤而被鞭打，后被释放。</data>
+  <data key="d3">chunk-5d945978a9335688cbe9222a26a11de5&lt;SEP&gt;chunk-06db17fbb1c4212f20f5d3379033ffbc</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="老鼠">
+  <data key="d0">老鼠</data>
+  <data key="d1">animal</data>
+  <data key="d2">老鼠是胡国华在困苦时的伙伴，它因胡国华的疏忽而死，胡国华决定为它安葬。&lt;SEP&gt;老鼠是胡国华的金兰兄弟，它经常叼来银元帮助胡国华买福寿膏。</data>
+  <data key="d3">chunk-5d945978a9335688cbe9222a26a11de5&lt;SEP&gt;chunk-06db17fbb1c4212f20f5d3379033ffbc</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="保安队">
+  <data key="d0">保安队</data>
+  <data key="d1">organization</data>
+  <data key="d2">保安队是当地的一个组织，他们的队长是军阀的亲戚，负责处理胡国华的案件。</data>
+  <data key="d3">chunk-5d945978a9335688cbe9222a26a11de5</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="军阀">
+  <data key="d0">军阀</data>
+  <data key="d1">person</data>
+  <data key="d2">军阀是一个地方的势力，他的亲戚是保安队的队长，当时正在请这个军阀喝酒。</data>
+  <data key="d3">chunk-5d945978a9335688cbe9222a26a11de5</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="私塾">
+  <data key="d0">私塾</data>
+  <data key="d1">category</data>
+  <data key="d2">私塾是一种传统的教育形式，胡国华曾经在那里学习。</data>
+  <data key="d3">chunk-5d945978a9335688cbe9222a26a11de5</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="无赖">
+  <data key="d0">无赖</data>
+  <data key="d1">category</data>
+  <data key="d2">无赖是指那些没有固定职业，经常欺负别人的人，王二杠子就是其中之一。</data>
+  <data key="d3">chunk-5d945978a9335688cbe9222a26a11de5</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="大烟">
+  <data key="d0">大烟</data>
+  <data key="d1">category</data>
+  <data key="d2">大烟是指鸦片，胡国华和王二杠子都抽大烟。</data>
+  <data key="d3">chunk-5d945978a9335688cbe9222a26a11de5</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="棉絮">
+  <data key="d0">棉絮</data>
+  <data key="d1">category</data>
+  <data key="d2">棉絮是一种填充物，胡国华用它为老鼠在床上摆了个窝。</data>
+  <data key="d3">chunk-5d945978a9335688cbe9222a26a11de5</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="银元">
+  <data key="d0">银元</data>
+  <data key="d1">currency</data>
+  <data key="d2">银元是一种古代的货币形式，老鼠叼回来的银元帮助胡国华购买福寿膏。&lt;SEP&gt;银元是指陪葬的银币，放在美女身旁，数量很多。</data>
+  <data key="d3">chunk-5d945978a9335688cbe9222a26a11de5&lt;SEP&gt;chunk-06d06ff27f6166c34cb3fb0cc4f66b03</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="军阀头子">
+  <data key="d0">军阀头子</data>
+  <data key="d1">organization</data>
+  <data key="d2">军阀头子是胡国华所追随的军阀组织的领导者，负责提拔和指挥手下士兵。</data>
+  <data key="d3">chunk-06db17fbb1c4212f20f5d3379033ffbc</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="保安队长">
+  <data key="d0">保安队长</data>
+  <data key="d1">person</data>
+  <data key="d2">保安队长是故事中出现的保安组织的领导者，负责处理胡国华的请求。</data>
+  <data key="d3">chunk-06db17fbb1c4212f20f5d3379033ffbc</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="十三里铺">
+  <data key="d0">十三里铺</data>
+  <data key="d1">location</data>
+  <data key="d2">十三里铺是故事中提到的一个地方，胡国华在那里寻找墓地。</data>
+  <data key="d3">chunk-06db17fbb1c4212f20f5d3379033ffbc</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="白纸女人">
+  <data key="d0">白纸女人</data>
+  <data key="d1">person</data>
+  <data key="d2">白纸女人是故事中附在白纸上的亡魂，向胡国华提供了寻找墓地的方法。</data>
+  <data key="d3">chunk-06db17fbb1c4212f20f5d3379033ffbc</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="荒坟">
+  <data key="d0">荒坟</data>
+  <data key="d1">location</data>
+  <data key="d2">荒坟是指十三里铺中没有墓碑的孤坟，胡国华计划去那里寻找陪葬的金银首饰。</data>
+  <data key="d3">chunk-06db17fbb1c4212f20f5d3379033ffbc</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="土匪">
+  <data key="d0">土匪</data>
+  <data key="d1">organization</data>
+  <data key="d2">土匪是指胡国华卖给烟土粮食的匪帮，帮助他在紧急时刻解决燃眉之急。</data>
+  <data key="d3">chunk-06db17fbb1c4212f20f5d3379033ffbc</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="发落">
+  <data key="d0">发落</data>
+  <data key="d1">category</data>
+  <data key="d2">发落是指军阀头子对胡国华的处理决定，包括该杀该罚。</data>
+  <data key="d3">chunk-06db17fbb1c4212f20f5d3379033ffbc</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="烟土">
+  <data key="d0">烟土</data>
+  <data key="d1">category</data>
+  <data key="d2">烟土是指胡国华卖给土匪以换取粮食和烟土的物品。</data>
+  <data key="d3">chunk-06db17fbb1c4212f20f5d3379033ffbc</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="烧酒">
+  <data key="d0">烧酒</data>
+  <data key="d1">category</data>
+  <data key="d2">烧酒是指胡国华用来壮胆的酒。</data>
+  <data key="d3">chunk-06db17fbb1c4212f20f5d3379033ffbc</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="风灯">
+  <data key="d0">风灯</data>
+  <data key="d1">category</data>
+  <data key="d2">风灯是一种手持的照明工具，这里描述它的光忽明忽暗，增加了坟地的恐怖感。&lt;SEP&gt;风灯是指胡国华用来照明的灯具。</data>
+  <data key="d3">chunk-06d06ff27f6166c34cb3fb0cc4f66b03&lt;SEP&gt;chunk-06db17fbb1c4212f20f5d3379033ffbc</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="铁锹">
+  <data key="d0">铁锹</data>
+  <data key="d1">category</data>
+  <data key="d2">铁锹是指胡国华用来挖掘荒坟的工具。</data>
+  <data key="d3">chunk-06db17fbb1c4212f20f5d3379033ffbc</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="房中">
+  <data key="d0">房中</data>
+  <data key="d1">location</data>
+  <data key="d2">房中是指胡国华曾经住过的房屋，后来被拆毁。</data>
+  <data key="d3">chunk-06db17fbb1c4212f20f5d3379033ffbc</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="坟堆">
+  <data key="d0">坟堆</data>
+  <data key="d1">location</data>
+  <data key="d2">坟堆是指埋葬死者的土堆，这里描述的是一个野坟，里面飘荡着磷火。</data>
+  <data key="d3">chunk-06d06ff27f6166c34cb3fb0cc4f66b03</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="怪鸟">
+  <data key="d0">怪鸟</data>
+  <data key="d1">animal</data>
+  <data key="d2">怪鸟是指坟地里发出叽叽吱吱叫声的鸟，增加了坟地的诡异气氛。</data>
+  <data key="d3">chunk-06d06ff27f6166c34cb3fb0cc4f66b03</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="孤坟">
+  <data key="d0">孤坟</data>
+  <data key="d1">location</data>
+  <data key="d2">孤坟是指没有墓碑的坟墓，在荒坟野地中显得与众不同。</data>
+  <data key="d3">chunk-06d06ff27f6166c34cb3fb0cc4f66b03</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="棺材">
+  <data key="d0">棺材</data>
+  <data key="d1">equipment</data>
+  <data key="d2">棺材是女尸坐的地方，位于竖立的棺材顶端。&lt;SEP&gt;棺材是指埋葬死者的木箱，这里描述它的棺材没在封土堆下面，而是立着插在坟丘上，棺材很新，锃明瓦亮的，泛着诡异的光芒。</data>
+  <data key="d3">chunk-9aa774770b29966a85f28c35f235b371&lt;SEP&gt;chunk-06d06ff27f6166c34cb3fb0cc4f66b03</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="茯蓉膏">
+  <data key="d0">茯蓉膏</data>
+  <data key="d1">medicine</data>
+  <data key="d2">茯蓉膏是一种药物，胡国华用来缓解鸦片的刺激。</data>
+  <data key="d3">chunk-06d06ff27f6166c34cb3fb0cc4f66b03</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="美女">
+  <data key="d0">美女</data>
+  <data key="d1">person</data>
+  <data key="d2">美女是指棺中尸体，面目栩栩如生，身着新娘妆扮，但脸上擦得很厚的粉和红胭脂显得诡异。</data>
+  <data key="d3">chunk-06d06ff27f6166c34cb3fb0cc4f66b03</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="祖母绿宝石戒指">
+  <data key="d0">祖母绿宝石戒指</data>
+  <data key="d1">item</data>
+  <data key="d2">祖母绿宝石戒指是指美女手上的首饰，胡国华想取下它。</data>
+  <data key="d3">chunk-06d06ff27f6166c34cb3fb0cc4f66b03</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="金条">
+  <data key="d0">金条</data>
+  <data key="d1">currency</data>
+  <data key="d2">金条是指陪葬的黄金，数量很多。</data>
+  <data key="d3">chunk-06d06ff27f6166c34cb3fb0cc4f66b03</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="烧刀子">
+  <data key="d0">烧刀子</data>
+  <data key="d1">alcohol</data>
+  <data key="d2">烧刀子是一种烈酒，胡国华喝了之后感到冷汗淋漓。</data>
+  <data key="d3">chunk-06d06ff27f6166c34cb3fb0cc4f66b03</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="荒坟野地">
+  <data key="d0">荒坟野地</data>
+  <data key="d1">location</data>
+  <data key="d2">荒坟野地是指坟地周围荒凉无人的地方，增加了坟地的恐怖感。</data>
+  <data key="d3">chunk-06d06ff27f6166c34cb3fb0cc4f66b03</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="磷火">
+  <data key="d0">磷火</data>
+  <data key="d1">light</data>
+  <data key="d2">磷火是指坟堆里飘荡的磷光，增加了坟地的恐怖感。</data>
+  <data key="d3">chunk-06d06ff27f6166c34cb3fb0cc4f66b03</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="冷汗">
+  <data key="d0">冷汗</data>
+  <data key="d1">body_condition</data>
+  <data key="d2">冷汗是指胡国华因为喝了烧刀子而感到冷汗淋漓，增加了他的恐惧感。</data>
+  <data key="d3">chunk-06d06ff27f6166c34cb3fb0cc4f66b03</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="山歌">
+  <data key="d0">山歌</data>
+  <data key="d1">music</data>
+  <data key="d2">山歌是指胡国华用来壮胆的歌曲，但会的歌不多。</data>
+  <data key="d3">chunk-06d06ff27f6166c34cb3fb0cc4f66b03</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="五更相思调">
+  <data key="d0">五更相思调</data>
+  <data key="d1">music</data>
+  <data key="d2">五更相思调是指胡国华唱的歌曲之一，但很快就没有词了。</data>
+  <data key="d3">chunk-06d06ff27f6166c34cb3fb0cc4f66b03</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="十八摸">
+  <data key="d0">十八摸</data>
+  <data key="d1">music</data>
+  <data key="d2">十八摸是指胡国华唱的歌曲之一，但很快就没有词了。</data>
+  <data key="d3">chunk-06d06ff27f6166c34cb3fb0cc4f66b03</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="荒凉无人">
+  <data key="d0">荒凉无人</data>
+  <data key="d1">environment</data>
+  <data key="d2">荒凉无人是指坟地周围荒凉没有人烟的地方，增加了坟地的恐怖感。</data>
+  <data key="d3">chunk-06d06ff27f6166c34cb3fb0cc4f66b03</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="女尸">
+  <data key="d0">女尸</data>
+  <data key="d1">person</data>
+  <data key="d2">女尸是一个僵尸，它试图吃掉小翠的心肝并攻击胡国华。&lt;SEP&gt;女尸是一个百年尸魔，她设计骗胡国华来挖坟，并威逼利诱他抓来无辜女子供她活吃人心。</data>
+  <data key="d3">chunk-9aa774770b29966a85f28c35f235b371&lt;SEP&gt;chunk-2a61185ad17a4bd57bb65baaa16a0a96</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="十三里铺坟地">
+  <data key="d0">十三里铺坟地</data>
+  <data key="d1">location</data>
+  <data key="d2">十三里铺坟地是故事中女尸藏身的地方，胡国华曾被女尸控制去此地抓女子。</data>
+  <data key="d3">chunk-9aa774770b29966a85f28c35f235b371</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="孙先生">
+  <data key="d0">孙先生</data>
+  <data key="d1">person</data>
+  <data key="d2">孙先生是一位有名的风水先生，他天生阴阳眼，能看风水算命，还会遁甲五行的奇术。&lt;SEP&gt;孙先生是一位有特殊能力的人，擅长救赎和处理僵尸问题，他要求胡国华拜他为师并戒掉烟瘾。&lt;SEP&gt;孙先生是胡国华的师傅，曾传授给他一些看风水寻墓穴的小术，但未能传授他真实本领。</data>
+  <data key="d3">chunk-9aa774770b29966a85f28c35f235b371&lt;SEP&gt;chunk-2a61185ad17a4bd57bb65baaa16a0a96&lt;SEP&gt;chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="小翠">
+  <data key="d0">小翠</data>
+  <data key="d1">person</data>
+  <data key="d2">小翠是孙先生用来迷惑女尸的纸人，实际上她是一个女尸的受害者。&lt;SEP&gt;小翠是胡国华在穷山沟买来的姑娘，她被胡国华骗回去当作媳妇。&lt;SEP&gt;小翠是胡国华的妻子，给胡国华生了一个儿子，取名胡云宣。</data>
+  <data key="d3">chunk-9aa774770b29966a85f28c35f235b371&lt;SEP&gt;chunk-2a61185ad17a4bd57bb65baaa16a0a96&lt;SEP&gt;chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="民国初年">
+  <data key="d0">民国初年</data>
+  <data key="d1">category</data>
+  <data key="d2">民国初年是故事发生的时代背景，当时明令禁止人口买卖，但因贫穷屡见不鲜。</data>
+  <data key="d3">chunk-9aa774770b29966a85f28c35f235b371</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="大金条">
+  <data key="d0">大金条</data>
+  <data key="d1">equipment</data>
+  <data key="d2">大金条是女尸赏给胡国华的，他用这些金条买走小翠。</data>
+  <data key="d3">chunk-9aa774770b29966a85f28c35f235b371</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="十三里铺荒坟">
+  <data key="d0">十三里铺荒坟</data>
+  <data key="d1">location</data>
+  <data key="d2">十三里铺荒坟是故事中发生的关键地点，女尸在那里等候胡国华。</data>
+  <data key="d3">chunk-2a61185ad17a4bd57bb65baaa16a0a96</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="孙先生的古书《十六字阴阳风水秘术》">
+  <data key="d0">孙先生的古书《十六字阴阳风水秘术》</data>
+  <data key="d1">category</data>
+  <data key="d2">这本书是孙先生留给胡国华的，书中包含一些看风水的小术。</data>
+  <data key="d3">chunk-2a61185ad17a4bd57bb65baaa16a0a96</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="胡云宣">
+  <data key="d0">胡云宣</data>
+  <data key="d1">person</data>
+  <data key="d2">胡云宣是胡国华的儿子，十七岁时到省城的英国教会学校读书，后来离家出走，投奔了革命圣地延安，参了军，建国时已经是三野六纵的某团团长。</data>
+  <data key="d3">chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="胡建军">
+  <data key="d0">胡建军</data>
+  <data key="d1">person</data>
+  <data key="d2">胡建军是胡云宣的儿子，因为上幼儿园时重名太多，改名为胡八一。</data>
+  <data key="d3">chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="胡八一">
+  <data key="d0">胡八一</data>
+  <data key="d1">person</data>
+  <data key="d2">胡八一是胡云宣的儿子，名字来源于八一建军节，因重名太多而改名。</data>
+  <data key="d3">chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="三野野司">
+  <data key="d0">三野野司</data>
+  <data key="d1">organization</data>
+  <data key="d2">三野野司是三野的司令部，是胡云宣参军后所在的地方。</data>
+  <data key="d3">chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="八一建军节">
+  <data key="d0">八一建军节</data>
+  <data key="d1">event</data>
+  <data key="d2">八一建军节是胡建军的名字来源，也是胡八一的出生日期。</data>
+  <data key="d3">chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="岗岗营子">
+  <data key="d0">岗岗营子</data>
+  <data key="d1">location</data>
+  <data key="d2">岗岗营子是一个地方的名字，具体位置不详，只知道是作者和知青们要去的地方。&lt;SEP&gt;岗岗营子是胡八一和王凯旋插队的地方，地名他们以前从未听过。</data>
+  <data key="d3">chunk-31c4664f80949b2aae3033af881a3629&lt;SEP&gt;chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="王凯旋">
+  <data key="d0">王凯旋</data>
+  <data key="d1">person</data>
+  <data key="d2">王凯旋是胡八一的哥们儿，外号叫胖子，和胡八一一起插队去了内蒙的岗岗营子。</data>
+  <data key="d3">chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="知青">
+  <data key="d0">知青</data>
+  <data key="d1">category</data>
+  <data key="d2">知青是指上山下乡的知青，胡八一和王凯旋属于这一类。</data>
+  <data key="d3">chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="文革">
+  <data key="d0">文革</data>
+  <data key="d1">event</data>
+  <data key="d2">文革是指文化大革命，胡八一家受到了冲击，被隔离审查，祖父也被批斗游街。</data>
+  <data key="d3">chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="公共厕所">
+  <data key="d0">公共厕所</data>
+  <data key="d1">location</data>
+  <data key="d2">公共厕所是作者提到的地方，房顶上藏有一本书。&lt;SEP&gt;公共厕所是胡八一祖父藏书的地方，书被用油布包着藏在房顶上。</data>
+  <data key="d3">chunk-31c4664f80949b2aae3033af881a3629&lt;SEP&gt;chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="英国教会学校">
+  <data key="d0">英国教会学校</data>
+  <data key="d1">organization</data>
+  <data key="d2">英国教会学校是胡云宣十七岁时去读书的地方，位于省城。</data>
+  <data key="d3">chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="革命圣地延安">
+  <data key="d0">革命圣地延安</data>
+  <data key="d1">location</data>
+  <data key="d2">革命圣地延安是胡云宣投奔的地方，后来成为了革命的根据地。</data>
+  <data key="d3">chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="三野六纵">
+  <data key="d0">三野六纵</data>
+  <data key="d1">organization</data>
+  <data key="d2">三野六纵是胡云宣参军后所在的地方，建国时已经是某团团长。</data>
+  <data key="d3">chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="渡江战役">
+  <data key="d0">渡江战役</data>
+  <data key="d1">event</data>
+  <data key="d2">渡江战役是胡云宣随部队南下的历史事件，发生在建国后。</data>
+  <data key="d3">chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="南方">
+  <data key="d0">南方</data>
+  <data key="d1">location</data>
+  <data key="d2">南方是胡云宣随部队南下后安家的地方。</data>
+  <data key="d3">chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="祖父">
+  <data key="d0">祖父</data>
+  <data key="d1">person</data>
+  <data key="d2">祖父是胡国华的父亲，给胡国华看了一辈子的风水，为人选墓地。</data>
+  <data key="d3">chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="残书">
+  <data key="d0">残书</data>
+  <data key="d1">item</data>
+  <data key="d2">残书是胡国华留给胡云宣的一本古书《十六字阴阳风水秘术》，只有半卷。</data>
+  <data key="d3">chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="火葬">
+  <data key="d0">火葬</data>
+  <data key="d1">event</data>
+  <data key="d2">火葬是胡国华临终时的丧葬方式，他给火葬了。</data>
+  <data key="d3">chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="批斗游街">
+  <data key="d0">批斗游街</data>
+  <data key="d1">event</data>
+  <data key="d2">批斗游街是胡八一家受到冲击时被拉出去的方式，祖父被批斗游街。</data>
+  <data key="d3">chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="隔离审查">
+  <data key="d0">隔离审查</data>
+  <data key="d1">event</data>
+  <data key="d2">隔离审查是胡八一家受到冲击时的处理方式，他和他母亲都被隔离审查了。</data>
+  <data key="d3">chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="作者">
+  <data key="d0">作者</data>
+  <data key="d1">person</data>
+  <data key="d2">作者是故事的叙述者，但未提及具体姓名，主要描述了离家去岗岗营子的经历。</data>
+  <data key="d3">chunk-31c4664f80949b2aae3033af881a3629</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="知青们">
+  <data key="d0">知青们</data>
+  <data key="d1">person</data>
+  <data key="d2">知青们是一群离开家乡去往农村进行劳动锻炼的年轻人，他们与作者一同离开家乡前往岗岗营子。</data>
+  <data key="d3">chunk-31c4664f80949b2aae3033af881a3629</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="火车">
+  <data key="d0">火车</data>
+  <data key="d1">organization</data>
+  <data key="d2">火车是一种交通工具，作者乘坐火车离开家乡，前往岗岗营子。</data>
+  <data key="d3">chunk-31c4664f80949b2aae3033af881a3629</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="部队">
+  <data key="d0">部队</data>
+  <data key="d1">organization</data>
+  <data key="d2">部队是一个组织，作者提到去部队参军的热烈欢送场面，但作者和知青们并未去部队。</data>
+  <data key="d3">chunk-31c4664f80949b2aae3033af881a3629</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="家">
+  <data key="d0">家</data>
+  <data key="d1">geo</data>
+  <data key="d2">家是作者的出发地，具体地址未提及。</data>
+  <data key="d3">chunk-31c4664f80949b2aae3033af881a3629</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="《十六字阴阳风水秘术》">
+  <data key="d0">《十六字阴阳风水秘术》</data>
+  <data key="d1">category</data>
+  <data key="d2">《十六字阴阳风水秘术》是一本书，作者将其带在身边，用于想家时阅读。</data>
+  <data key="d3">chunk-31c4664f80949b2aae3033af881a3629</data>
+  <data key="d4">a.docx</data>
+</node>
+<node id="寻找古墓">
+  <data key="d0">寻找古墓</data>
+  <data key="d3">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d2">铁钎是一种工具，用于寻找古墓。</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">a.docx</data>
+</node>
+<edge source="盗墓" target="机关暗器">
+  <data key="d5">9.0</data>
+  <data key="d6">盗墓需要破解各种机关暗器才能进入坟墓探宝。</data>
+  <data key="d7">破解机关,探宝</data>
+  <data key="d8">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="坟墓" target="机关暗器">
+  <data key="d5">8.0</data>
+  <data key="d6">坟墓中设置各种机关暗器以防止被盗。</data>
+  <data key="d7">防盗,机关暗器</data>
+  <data key="d8">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="东陵" target="孙殿英">
+  <data key="d5">14.0</data>
+  <data key="d6">孙殿英曾经想挖开东陵用里面的财宝充当军饷。</data>
+  <data key="d7">盗墓,军饷</data>
+  <data key="d8">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="铁钎" target="寻找古墓">
+  <data key="d5">8.0</data>
+  <data key="d6">铁钎是一种工具，用于寻找古墓。</data>
+  <data key="d7">工具,寻找古墓</data>
+  <data key="d8">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="洛阳铲" target="寻找古墓">
+  <data key="d5">8.0</data>
+  <data key="d6">洛阳铲是一种工具，用于寻找古墓。</data>
+  <data key="d7">工具,寻找古墓</data>
+  <data key="d8">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="竹钉" target="寻找古墓">
+  <data key="d5">8.0</data>
+  <data key="d6">竹钉是一种工具，用于寻找古墓。</data>
+  <data key="d7">工具,寻找古墓</data>
+  <data key="d8">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="钻地龙" target="寻找古墓">
+  <data key="d5">8.0</data>
+  <data key="d6">钻地龙是一种工具，用于寻找古墓。</data>
+  <data key="d7">工具,寻找古墓</data>
+  <data key="d8">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="探阴爪" target="寻找古墓">
+  <data key="d5">8.0</data>
+  <data key="d6">探阴爪是一种工具，用于寻找古墓。</data>
+  <data key="d7">工具,寻找古墓</data>
+  <data key="d8">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="黑折子" target="寻找古墓">
+  <data key="d5">8.0</data>
+  <data key="d6">黑折子是一种工具，用于寻找古墓。</data>
+  <data key="d7">工具,寻找古墓</data>
+  <data key="d8">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="十六字阴阳风水秘术" target="寻找古墓">
+  <data key="d5">9.0</data>
+  <data key="d6">《十六字阴阳风水秘术》是一本残书，书中所述多半都是解读墓葬的风水格局之类的独门秘术。</data>
+  <data key="d7">秘术,风水</data>
+  <data key="d8">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="舅舅">
+  <data key="d5">13.0</data>
+  <data key="d6">胡国华骗舅舅说要娶媳妇，让舅舅给凑点钱。&lt;SEP&gt;舅舅来检查外甥媳妇的情况，发现纸人冒充媳妇的事实，与胡国华发生争执。</data>
+  <data key="d7">欺骗,凑钱&lt;SEP&gt;监督,怀疑</data>
+  <data key="d8">chunk-3eb4bb5b4d59d6d4aa8dca83c37bbba5&lt;SEP&gt;chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="赌博">
+  <data key="d5">7.0</data>
+  <data key="d6">赌博是胡国华败家的一个原因。</data>
+  <data key="d7">赌博,败家</data>
+  <data key="d8">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="福寿膏">
+  <data key="d5">28.0</data>
+  <data key="d6">福寿膏是胡国华抽的大烟。&lt;SEP&gt;胡国华因为烟瘾而使用福寿膏，但后来囊中羞涩。&lt;SEP&gt;胡国华曾经因为沾染福寿膏而受到舅舅的警告，显示了他的不良习惯。&lt;SEP&gt;胡国华用福寿膏来治疗抽大烟带来的身体不适。</data>
+  <data key="d7">不良习惯,警告&lt;SEP&gt;大烟,败家&lt;SEP&gt;治疗,药物&lt;SEP&gt;烟瘾,囊中羞涩</data>
+  <data key="d8">chunk-5d945978a9335688cbe9222a26a11de5&lt;SEP&gt;chunk-3eb4bb5b4d59d6d4aa8dca83c37bbba5&lt;SEP&gt;chunk-7be04447fe7c75d6415cbc6c23cba5fa&lt;SEP&gt;chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="分家">
+  <data key="d5">8.0</data>
+  <data key="d6">胡国华分到了不少家产，足够衣食无忧的过一辈子。</data>
+  <data key="d7">分家,衣食无忧</data>
+  <data key="d8">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="胡家祖上">
+  <data key="d5">8.0</data>
+  <data key="d6">胡家祖上是十里八乡有名的大地主，最辉煌的时期在城里买了三条胡同相连的四十多间宅子。</data>
+  <data key="d7">家世,辉煌</data>
+  <data key="d8">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="民国年间">
+  <data key="d5">7.0</data>
+  <data key="d6">民国年间，胡国华家道中落，分了家。</data>
+  <data key="d7">家道中落,分家</data>
+  <data key="d8">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="纸人">
+  <data key="d5">9.0</data>
+  <data key="d6">胡国华让匠人制作纸人冒充自己的媳妇，以逃避舅舅的监督。</data>
+  <data key="d7">欺骗,冒充</data>
+  <data key="d8">chunk-3eb4bb5b4d59d6d4aa8dca83c37bbba5</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="白纸人">
+  <data key="d5">9.0</data>
+  <data key="d6">白纸人冒充胡国华的媳妇，胡国华在关键时刻承认了白纸人的存在。</data>
+  <data key="d7">冒充,欺骗</data>
+  <data key="d8">chunk-3eb4bb5b4d59d6d4aa8dca83c37bbba5</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="那白纸糊的女人">
+  <data key="d5">7.0</data>
+  <data key="d6">那白纸糊的女人试图向胡国华求婚，但胡国华拒绝了她。</data>
+  <data key="d7">求婚拒绝,人鬼殊途</data>
+  <data key="d8">chunk-7be04447fe7c75d6415cbc6c23cba5fa</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="那大老鼠">
+  <data key="d5">8.0</data>
+  <data key="d6">胡国华和那大老鼠成为了朋友，每天一起吸福寿膏。</data>
+  <data key="d7">友谊,共同爱好</data>
+  <data key="d8">chunk-7be04447fe7c75d6415cbc6c23cba5fa</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="檀木箱子">
+  <data key="d5">7.0</data>
+  <data key="d6">胡国华卖掉了檀木箱子来买烟膏，以满足烟瘾。</data>
+  <data key="d7">卖箱子,买烟膏</data>
+  <data key="d8">chunk-7be04447fe7c75d6415cbc6c23cba5fa</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="胡国华的舅舅">
+  <data key="d5">8.0</data>
+  <data key="d6">胡国华的舅舅因为胡国华的行为而生病去世。</data>
+  <data key="d7">家庭关系,悲剧命运</data>
+  <data key="d8">chunk-7be04447fe7c75d6415cbc6c23cba5fa</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="老鼠">
+  <data key="d5">17.0</data>
+  <data key="d6">老鼠是胡国华的伙伴，因胡国华的疏忽而死，胡国华决定为它安葬。&lt;SEP&gt;胡国华和老鼠结为金兰兄弟，老鼠经常帮助他。</data>
+  <data key="d7">伙伴,安葬&lt;SEP&gt;友谊,帮助</data>
+  <data key="d8">chunk-5d945978a9335688cbe9222a26a11de5&lt;SEP&gt;chunk-06db17fbb1c4212f20f5d3379033ffbc</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="王二杠子">
+  <data key="d5">20.0</data>
+  <data key="d6">王二杠子被胡国华误伤，导致他被鞭打。&lt;SEP&gt;胡国华和王二杠子是敌对关系，王二杠子多次欺负胡国华。&lt;SEP&gt;胡国华误伤了王二杠子，导致他被鞭打，后被释放回家。</data>
+  <data key="d7">敌对,欺负&lt;SEP&gt;误伤,释放&lt;SEP&gt;误伤,鞭打</data>
+  <data key="d8">chunk-5d945978a9335688cbe9222a26a11de5&lt;SEP&gt;chunk-06db17fbb1c4212f20f5d3379033ffbc</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="保安队">
+  <data key="d5">8.0</data>
+  <data key="d6">胡国华被王二杠子伤后，保安队将他逮捕。</data>
+  <data key="d7">抓捕,伤害</data>
+  <data key="d8">chunk-5d945978a9335688cbe9222a26a11de5</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="军阀头子">
+  <data key="d5">6.0</data>
+  <data key="d6">胡国华被军阀头子提拔，后来因军阀混战而被另一路军阀打败。</data>
+  <data key="d7">提拔,失败</data>
+  <data key="d8">chunk-06db17fbb1c4212f20f5d3379033ffbc</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="保安队长">
+  <data key="d5">7.0</data>
+  <data key="d6">胡国华向保安队长请求放他回家安葬老鼠，保安队长建议他加入军阀的队伍。</data>
+  <data key="d7">请求,建议</data>
+  <data key="d8">chunk-06db17fbb1c4212f20f5d3379033ffbc</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="白纸女人">
+  <data key="d5">8.0</data>
+  <data key="d6">白纸女人向胡国华提供了寻找墓地的方法，指引他去十三里铺的荒坟中寻找金银首饰。</data>
+  <data key="d7">指引,寻找</data>
+  <data key="d8">chunk-06db17fbb1c4212f20f5d3379033ffbc</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="荒坟">
+  <data key="d5">7.0</data>
+  <data key="d6">胡国华计划去荒坟中寻找陪葬的金银首饰，以解决生活困境。</data>
+  <data key="d7">寻找,解决</data>
+  <data key="d8">chunk-06db17fbb1c4212f20f5d3379033ffbc</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="土匪">
+  <data key="d5">6.0</data>
+  <data key="d6">胡国华为了生存，卖掉了手枪，换取烟土粮食。</data>
+  <data key="d7">生存,换取</data>
+  <data key="d8">chunk-06db17fbb1c4212f20f5d3379033ffbc</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="发落">
+  <data key="d5">6.0</data>
+  <data key="d6">军阀头子对胡国华的处理决定包括该杀该罚。</data>
+  <data key="d7">处理,决定</data>
+  <data key="d8">chunk-06db17fbb1c4212f20f5d3379033ffbc</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="烟土">
+  <data key="d5">6.0</data>
+  <data key="d6">胡国华为了生存，卖掉了手枪，换取烟土粮食。</data>
+  <data key="d7">生存,换取</data>
+  <data key="d8">chunk-06db17fbb1c4212f20f5d3379033ffbc</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="烧酒">
+  <data key="d5">5.0</data>
+  <data key="d6">胡国华为了壮胆，喝了烧酒。</data>
+  <data key="d7">壮胆,饮酒</data>
+  <data key="d8">chunk-06db17fbb1c4212f20f5d3379033ffbc</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="风灯">
+  <data key="d5">5.0</data>
+  <data key="d6">胡国华为了照明，带了风灯。</data>
+  <data key="d7">照明,工具</data>
+  <data key="d8">chunk-06db17fbb1c4212f20f5d3379033ffbc</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="铁锹">
+  <data key="d5">5.0</data>
+  <data key="d6">胡国华为了挖掘荒坟，带了铁锹。</data>
+  <data key="d7">挖掘,工具</data>
+  <data key="d8">chunk-06db17fbb1c4212f20f5d3379033ffbc</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="十三里铺">
+  <data key="d5">7.0</data>
+  <data key="d6">胡国华计划去十三里铺寻找墓地。</data>
+  <data key="d7">寻找,地点</data>
+  <data key="d8">chunk-06db17fbb1c4212f20f5d3379033ffbc</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="坟堆">
+  <data key="d5">6.0</data>
+  <data key="d6">胡国华在坟堆中感到害怕，唱了几段山歌给自己壮胆。</data>
+  <data key="d7">恐惧,壮胆</data>
+  <data key="d8">chunk-06d06ff27f6166c34cb3fb0cc4f66b03</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="孤坟">
+  <data key="d5">7.0</data>
+  <data key="d6">胡国华到达了孤坟中央，发现这座坟与众不同。</data>
+  <data key="d7">探索,发现</data>
+  <data key="d8">chunk-06d06ff27f6166c34cb3fb0cc4f66b03</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="棺材">
+  <data key="d5">8.0</data>
+  <data key="d6">胡国华挖开棺材，发现里面是一具美女尸体。</data>
+  <data key="d7">发现,恐惧</data>
+  <data key="d8">chunk-06d06ff27f6166c34cb3fb0cc4f66b03</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="美女">
+  <data key="d5">18.0</data>
+  <data key="d6">美女睁开双眼，向胡国华展示她的力量，并威胁要取走他的心脏。&lt;SEP&gt;胡国华试图取下美女手上的祖母绿宝石戒指，却被她抓住手腕。</data>
+  <data key="d7">威胁,力量&lt;SEP&gt;贪婪,恐惧</data>
+  <data key="d8">chunk-06d06ff27f6166c34cb3fb0cc4f66b03</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="茯蓉膏">
+  <data key="d5">7.0</data>
+  <data key="d6">胡国华掏出身上带的茯蓉膏往鼻子里吸了一点，缓解鸦片的刺激。</data>
+  <data key="d7">缓解,药物</data>
+  <data key="d8">chunk-06d06ff27f6166c34cb3fb0cc4f66b03</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="磷火">
+  <data key="d5">6.0</data>
+  <data key="d6">胡国华在磷火的照耀下感到害怕，唱了几段山歌给自己壮胆。</data>
+  <data key="d7">恐惧,光</data>
+  <data key="d8">chunk-06d06ff27f6166c34cb3fb0cc4f66b03</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="冷汗">
+  <data key="d5">7.0</data>
+  <data key="d6">胡国华因为喝了烧刀子而感到冷汗淋漓，增加了他的恐惧感。</data>
+  <data key="d7">恐惧,身体状况</data>
+  <data key="d8">chunk-06d06ff27f6166c34cb3fb0cc4f66b03</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="山歌">
+  <data key="d5">6.0</data>
+  <data key="d6">胡国华唱了几段山歌给自己壮胆，但会的歌不多。</data>
+  <data key="d7">壮胆,唱歌</data>
+  <data key="d8">chunk-06d06ff27f6166c34cb3fb0cc4f66b03</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="五更相思调">
+  <data key="d5">6.0</data>
+  <data key="d6">胡国华唱了几段山歌，其中有一段是五更相思调。</data>
+  <data key="d7">唱歌,歌曲</data>
+  <data key="d8">chunk-06d06ff27f6166c34cb3fb0cc4f66b03</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="十八摸">
+  <data key="d5">6.0</data>
+  <data key="d6">胡国华唱了几段山歌，其中有一段是十八摸。</data>
+  <data key="d7">唱歌,歌曲</data>
+  <data key="d8">chunk-06d06ff27f6166c34cb3fb0cc4f66b03</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="烧刀子">
+  <data key="d5">7.0</data>
+  <data key="d6">胡国华喝了烧刀子之后感到冷汗淋漓，增加了他的恐惧感。</data>
+  <data key="d7">恐惧,酒精</data>
+  <data key="d8">chunk-06d06ff27f6166c34cb3fb0cc4f66b03</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="荒凉无人">
+  <data key="d5">6.0</data>
+  <data key="d6">胡国华在荒凉无人的坟地里感到害怕，唱了几段山歌给自己壮胆。</data>
+  <data key="d7">恐惧,环境</data>
+  <data key="d8">chunk-06d06ff27f6166c34cb3fb0cc4f66b03</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="女尸">
+  <data key="d5">27.0</data>
+  <data key="d6">女尸控制胡国华，让他去抓女子供她活吃人心。&lt;SEP&gt;女尸攻击胡国华，并试图吃掉小翠的心肝。&lt;SEP&gt;胡国华被女尸控制，被迫去抓无辜女子供她活吃人心。</data>
+  <data key="d7">控制，行动&lt;SEP&gt;控制，被迫&lt;SEP&gt;攻击, 消灭</data>
+  <data key="d8">chunk-9aa774770b29966a85f28c35f235b371&lt;SEP&gt;chunk-2a61185ad17a4bd57bb65baaa16a0a96</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="小翠">
+  <data key="d5">23.0</data>
+  <data key="d6">小翠被胡国华骗回去当作媳妇，被迫跟随他。&lt;SEP&gt;胡国华买走了小翠，骗她回去当作媳妇。&lt;SEP&gt;胡国华利用小翠纸人迷惑女尸，保护自己。</data>
+  <data key="d7">保护, 欺骗&lt;SEP&gt;欺骗，交易</data>
+  <data key="d8">chunk-9aa774770b29966a85f28c35f235b371&lt;SEP&gt;chunk-2a61185ad17a4bd57bb65baaa16a0a96</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="孙先生">
+  <data key="d5">27.0</data>
+  <data key="d6">孙先生发现胡国华面有黑气，提醒他戒烟，并救他脱离女尸的控制。&lt;SEP&gt;孙先生救了胡国华，并要求他拜自己为师并戒掉烟瘾。&lt;SEP&gt;胡国华是孙先生的徒弟，孙先生在临终前把一本残书留给了胡国华作为纪念。</data>
+  <data key="d7">师徒关系, 救赎&lt;SEP&gt;师徒关系,纪念品&lt;SEP&gt;提醒，救赎</data>
+  <data key="d8">chunk-9aa774770b29966a85f28c35f235b371&lt;SEP&gt;chunk-2a61185ad17a4bd57bb65baaa16a0a96&lt;SEP&gt;chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="十三里铺坟地">
+  <data key="d5">9.0</data>
+  <data key="d6">胡国华被女尸控制前往十三里铺坟地抓女子。</data>
+  <data key="d7">控制，行动</data>
+  <data key="d8">chunk-9aa774770b29966a85f28c35f235b371</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡国华" target="胡云宣">
+  <data key="d5">8.0</data>
+  <data key="d6">胡云宣是胡国华的儿子，胡国华在临终前把一本残书留给了胡云宣。</data>
+  <data key="d7">父传子,纪念品</data>
+  <data key="d8">chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="舅舅" target="娶媳妇">
+  <data key="d5">6.0</data>
+  <data key="d6">舅舅感动得老泪纵横，这个不肖的外甥总算是办件正事，要是娶个贤惠的媳妇好好管管他。</data>
+  <data key="d7">关心,娶媳妇</data>
+  <data key="d8">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="舅舅" target="纸人">
+  <data key="d5">8.0</data>
+  <data key="d6">纸人冒充胡国华的媳妇，使舅舅相信了胡国华的新媳妇贤惠。</data>
+  <data key="d7">冒充,欺骗</data>
+  <data key="d8">chunk-3eb4bb5b4d59d6d4aa8dca83c37bbba5</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="娶媳妇" target="舅舅给拿的钱">
+  <data key="d5">7.0</data>
+  <data key="d6">舅舅给拿的钱是20块大洋，用来给胡国华娶媳妇。</data>
+  <data key="d7">钱,娶媳妇</data>
+  <data key="d8">chunk-e6da0513b4a90f87b7b70b858eeaefbf</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="福寿膏" target="白纸人">
+  <data key="d5">7.0</data>
+  <data key="d6">白纸人是胡国华为了逃避舅舅的监督而制作的，暗示了纸人与福寿膏之间的联系。</data>
+  <data key="d7">逃避,监督</data>
+  <data key="d8">chunk-3eb4bb5b4d59d6d4aa8dca83c37bbba5</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="福寿膏" target="那大老鼠">
+  <data key="d5">9.0</data>
+  <data key="d6">那大老鼠喜欢吸福寿膏，它对福寿膏有浓厚的兴趣。</data>
+  <data key="d7">共同爱好,享受福寿膏</data>
+  <data key="d8">chunk-7be04447fe7c75d6415cbc6c23cba5fa</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="纸人" target="白纸人">
+  <data key="d5">8.0</data>
+  <data key="d6">纸人是白纸人的一种具体形态，由匠人制作。</data>
+  <data key="d7">具体化,形态</data>
+  <data key="d8">chunk-3eb4bb5b4d59d6d4aa8dca83c37bbba5</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="白纸人" target="胡国华的媳妇">
+  <data key="d5">9.0</data>
+  <data key="d6">胡国华的媳妇实际上是白纸人，白纸人冒充胡国华的新媳妇。</data>
+  <data key="d7">冒充,欺骗</data>
+  <data key="d8">chunk-3eb4bb5b4d59d6d4aa8dca83c37bbba5</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="王二杠子" target="老鼠">
+  <data key="d5">7.0</data>
+  <data key="d6">王二杠子试图通过烫死老鼠来报复胡国华。</data>
+  <data key="d7">报复,伤害</data>
+  <data key="d8">chunk-5d945978a9335688cbe9222a26a11de5</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="王二杠子" target="保安队">
+  <data key="d5">7.0</data>
+  <data key="d6">王二杠子被胡国华砍伤后，逃到保安队求救，保安队将胡国华逮捕。</data>
+  <data key="d7">报复,伤害</data>
+  <data key="d8">chunk-5d945978a9335688cbe9222a26a11de5</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="王二杠子" target="军阀">
+  <data key="d5">6.0</data>
+  <data key="d6">王二杠子试图通过报复胡国华来报复军阀。</data>
+  <data key="d7">报复,敌对</data>
+  <data key="d8">chunk-5d945978a9335688cbe9222a26a11de5</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="王二杠子" target="军阀头子">
+  <data key="d5">6.0</data>
+  <data key="d6">王二杠子被军阀头子的部队打败，逃回了老家。</data>
+  <data key="d7">失败,逃回</data>
+  <data key="d8">chunk-06db17fbb1c4212f20f5d3379033ffbc</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="银元" target="美女">
+  <data key="d5">9.0</data>
+  <data key="d6">美女陪葬的银元数量很多，对胡国华来说是一个巨大的财富。</data>
+  <data key="d7">财富,陪葬品</data>
+  <data key="d8">chunk-06d06ff27f6166c34cb3fb0cc4f66b03</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="坟堆" target="磷火">
+  <data key="d5">7.0</data>
+  <data key="d6">磷火飘荡在坟堆里，增加了坟地的恐怖感。</data>
+  <data key="d7">恐怖,光</data>
+  <data key="d8">chunk-06d06ff27f6166c34cb3fb0cc4f66b03</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="棺材" target="女尸">
+  <data key="d5">8.0</data>
+  <data key="d6">女尸坐在竖立的棺材顶端，指挥胡国华行动。</data>
+  <data key="d7">坐位，指挥</data>
+  <data key="d8">chunk-9aa774770b29966a85f28c35f235b371</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="美女" target="金条">
+  <data key="d5">9.0</data>
+  <data key="d6">美女陪葬的金条数量很多，对胡国华来说是一个巨大的财富。</data>
+  <data key="d7">财富,陪葬品</data>
+  <data key="d8">chunk-06d06ff27f6166c34cb3fb0cc4f66b03</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="女尸" target="大金条">
+  <data key="d5">8.0</data>
+  <data key="d6">女尸赏给胡国华大金条，他用这些金条买走小翠。</data>
+  <data key="d7">赏赐，交易</data>
+  <data key="d8">chunk-9aa774770b29966a85f28c35f235b371</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="女尸" target="孙先生">
+  <data key="d5">27.0</data>
+  <data key="d6">孙先生发现胡国华受到女尸控制，试图解救他。&lt;SEP&gt;孙先生用秘方治好了胡国华的烟瘾，并传授他看风水的本领。&lt;SEP&gt;孙先生用计策让女尸吃了黑驴蹄子，导致女尸被消灭。</data>
+  <data key="d7">传授技能, 救人&lt;SEP&gt;智斗, 消灭僵尸&lt;SEP&gt;解救，控制</data>
+  <data key="d8">chunk-9aa774770b29966a85f28c35f235b371&lt;SEP&gt;chunk-2a61185ad17a4bd57bb65baaa16a0a96</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="孙先生" target="小翠">
+  <data key="d5">8.0</data>
+  <data key="d6">孙先生用纸人小翠迷惑女尸，保护胡国华。</data>
+  <data key="d7">保护, 欺骗</data>
+  <data key="d8">chunk-2a61185ad17a4bd57bb65baaa16a0a96</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡云宣" target="胡八一">
+  <data key="d5">9.0</data>
+  <data key="d6">胡八一是胡云宣的儿子，胡云宣在临终前把一本残书留给了胡八一。</data>
+  <data key="d7">父传子,纪念品</data>
+  <data key="d8">chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡八一" target="王凯旋">
+  <data key="d5">9.0</data>
+  <data key="d6">胡八一和王凯旋一起去了岗岗营子插队。</data>
+  <data key="d7">插队伙伴,共同经历</data>
+  <data key="d8">chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡八一" target="岗岗营子">
+  <data key="d5">8.0</data>
+  <data key="d6">胡八一在岗岗营子插队。</data>
+  <data key="d7">插队地点,个人经历</data>
+  <data key="d8">chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡八一" target="三野野司">
+  <data key="d5">18.0</data>
+  <data key="d6">胡八一在三野野司参军后，曾担任三野六纵的某团团长。</data>
+  <data key="d7">军旅生涯,职务</data>
+  <data key="d8">chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡八一" target="文革">
+  <data key="d5">8.0</data>
+  <data key="d6">文革时胡八一家受到了冲击，被隔离审查，祖父也被批斗游街。</data>
+  <data key="d7">文革影响,个人经历</data>
+  <data key="d8">chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡八一" target="公共厕所">
+  <data key="d5">9.0</data>
+  <data key="d6">胡八一祖父把残书藏在公共厕所的房顶上。</data>
+  <data key="d7">藏书地点,家族传统</data>
+  <data key="d8">chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡八一" target="批斗游街">
+  <data key="d5">8.0</data>
+  <data key="d6">胡八一家受到冲击时被拉出去批斗游街。</data>
+  <data key="d7">批斗游街,个人经历</data>
+  <data key="d8">chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="胡八一" target="隔离审查">
+  <data key="d5">8.0</data>
+  <data key="d6">胡八一家受到冲击时被隔离审查。</data>
+  <data key="d7">隔离审查,个人经历</data>
+  <data key="d8">chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="三野野司" target="岗岗营子">
+  <data key="d5">9.0</data>
+  <data key="d6">胡八一在三野野司参军后，曾担任三野六纵的某团团长。</data>
+  <data key="d7">军旅生涯,职务</data>
+  <data key="d8">chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="岗岗营子" target="岗岗营子">
+  <data key="d5">8.0</data>
+  <data key="d6">胡八一和王凯旋一起去了岗岗营子插队。</data>
+  <data key="d7">插队地点,共同经历</data>
+  <data key="d8">chunk-06b6b0383cade82f87ea09e5533e7e25</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="岗岗营子" target="作者">
+  <data key="d5">6.0</data>
+  <data key="d6">作者知道岗岗营子这个地方是在告诉他们去岗岗营子的那一刻。</data>
+  <data key="d7">目的地, 信息获得</data>
+  <data key="d8">chunk-31c4664f80949b2aae3033af881a3629</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="岗岗营子" target="知青们">
+  <data key="d5">7.0</data>
+  <data key="d6">知青们和作者一同离开家乡，前往岗岗营子。</data>
+  <data key="d7">共同经历, 目的地</data>
+  <data key="d8">chunk-31c4664f80949b2aae3033af881a3629</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="公共厕所" target="作者">
+  <data key="d5">6.0</data>
+  <data key="d6">作者提到公共厕所房顶上藏有一本书，表明公共厕所是作者经过的地方。</data>
+  <data key="d7">经过地, 人物移动</data>
+  <data key="d8">chunk-31c4664f80949b2aae3033af881a3629</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="作者" target="火车">
+  <data key="d5">8.0</data>
+  <data key="d6">作者乘坐火车离开家乡。</data>
+  <data key="d7">交通工具, 人物移动</data>
+  <data key="d8">chunk-31c4664f80949b2aae3033af881a3629</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="作者" target="家">
+  <data key="d5">7.0</data>
+  <data key="d6">家是作者的出发地，作者离开家前往岗岗营子。</data>
+  <data key="d7">出发地, 人物移动</data>
+  <data key="d8">chunk-31c4664f80949b2aae3033af881a3629</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="作者" target="《十六字阴阳风水秘术》">
+  <data key="d5">8.0</data>
+  <data key="d6">作者将《十六字阴阳风水秘术》这本书带在身边，用于想家时阅读。</data>
+  <data key="d7">随身携带, 阅读材料</data>
+  <data key="d8">chunk-31c4664f80949b2aae3033af881a3629</data>
+  <data key="d9">a.docx</data>
+</edge>
+<edge source="知青们" target="火车">
+  <data key="d5">8.0</data>
+  <data key="d6">知青们和作者一起乘坐火车离开家乡。</data>
+  <data key="d7">交通工具, 人物移动</data>
+  <data key="d8">chunk-31c4664f80949b2aae3033af881a3629</data>
+  <data key="d9">a.docx</data>
+</edge>
+</graph></graphml>

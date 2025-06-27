@@ -1,0 +1,26 @@
+import pandas as pd
+
+file_path = '摄影相机清单.xls'
+
+try:
+    # 读取数据并处理缺失值
+    data = pd.read_excel(
+        file_path, 
+        na_values=['NAN', 'Unnamed', ''],  # 将空字符串也视为缺失值
+        keep_default_na=False
+    )
+    
+    # 删除所有包含"Unnamed"的列
+    data = data.loc[:, ~data.columns.str.contains('Unnamed')]
+    
+    # 高级过滤：删除所有字段都为空的记录（包含NaN和空字符串）
+    data = data.dropna(how='all')  # 删除全NaN记录
+    data = data[data.ne('').any(axis=1)]  # 删除全空字符串记录
+    
+    # 转换为JSON
+    json_data = data.to_json(orient='records', force_ascii=False)
+    
+    print(json_data)
+
+except Exception as e:
+    print(f'读取文件时出错: {e}')

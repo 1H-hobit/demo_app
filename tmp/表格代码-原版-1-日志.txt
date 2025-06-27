@@ -1,0 +1,325 @@
+import pandas as pd
+
+# 读取文件
+excel_file = pd.ExcelFile('摄影相机清单.xls')
+
+# 获取所有表名
+sheet_names = excel_file.sheet_names
+
+# 遍历不同工作表
+for sheet_name in sheet_names:
+    # 获取当前工作表的数据
+    df = excel_file.parse(sheet_name)
+    print
+
+    # 移除包含 'Unnamed' 的列
+    df = df.loc[:, ~df.columns.str.contains('Unnamed')]
+
+    # 移除包含 nan 的行
+    df = df.dropna(how='all')
+
+    # 查看数据的基本信息
+    print(f'sheet表名为{sheet_name}的基本信息：')
+    df.info()
+
+    # 查看数据集行数和列数
+    rows, columns = df.shape
+
+    if rows < 100 and columns < 20:
+        # 短表数据（行数少于100且列数少于20）查看全量数据信息
+        print(f'sheet表名为{sheet_name}的全部内容信息：')
+        print(df.to_csv(sep='\t', na_rep='nan'))
+    else:
+        # 长表数据查看数据前几行信息
+        print(f'sheet表名为{sheet_name}的前几行内容信息：')
+        print(df.head().to_csv(sep='\t', na_rep='nan'))
+
+
+(D:\chainlit\molmo_env) D:\chainlit\chainlit-datalayer\demo_app\GPT_CodeInterpreter>chainlit run app.py
+2025-04-01 16:02:01 - Loaded .env file
+2025-04-01 16:02:03 - Your app is available at http://localhost:8000
+2025-04-01 16:02:05 - Translated markdown file for zh-CN not found. Defaulting to chainlit.md.
+2025-04-01 16:02:24 - HTTP Request: POST http://127.0.0.1:8181/v1/chat/completions "HTTP/1.1 200 OK"
+tool_calls:
+ [ChatCompletionMessageToolCall(id='Ccpt5njUncrwvTmy1vJP7MZBdnUpzCAU', function=Function(arguments='{"code":"import pandas as pd\\n\\n\\n# 读取文件\\nexcel_file = pd.ExcelFile(\'摄影相机清单.xls\')\\n\\n# 获取所有表名\\nsheet_names = excel_file.sheet_names\\n\\n# 遍历不同工作表\\nfor sheet_name in sheet_names:\\n    # 获取当前工作表的数据\\ndf = excel_file.parse(sheet_name)\\n\\n    # 将列
+名转换为字符串类型（关键修复）\\ndf.columns = df.columns.astype(str)\\n\\n    # 移除包含\'Unnamed\'的列\\ndf = df.loc[:, ~df.columns.str.contains(\'Unnamed\')]\\n\\n    # 移除包含nan的行（保留至少
+有一个有效值的行）\\ndf = df.dropna(how=\'all\')\\n\\n    # 查看数据的基本信息\\n    print(f\'sheet表名为{sheet_name}的基本信息：\')\\n    df.info()\\n\\n    # 查看数据集行数和列数\\n    rows, columns = df.shape\\n\\n    if rows < 100 and columns < 20:\\n        print(f\'sheet表名为{sheet_name}的全部内容信息：\')\\n        # 使用制表符分隔，空值显示为nan\\n        print(df.to_csv(sep=\\\\t, na_rep=\'nan\'))\\n    else:\\n        print(f\'sheet表名为{sheet_name}的前几行内容信息：\')\\n        print(df.head().to_csv(sep=\\\\t, na_rep=\'nan\'))","language":"python"}', name='python_exec'), type='function')]
+* 原始arguments_str:
+ {"code":"import pandas as pd\n\n\n# 读取文件\nexcel_file = pd.ExcelFile('摄影相机清单.xls')\n\n# 获取所有表名\nsheet_names = excel_file.sheet_names\n\n# 遍历不同工作表\nfor sheet_name in sheet_names:\n    # 获取当前工作表的数据\ndf = excel_file.parse(sheet_name)\n\n    # 将列名转换为字符串类型（关键修复）\ndf.columns = df.columns.astype(str)\n\n    # 移除包含'Unnamed'的列\ndf = df.loc[:, 
+~df.columns.str.contains('Unnamed')]\n\n    # 移除包含nan的行（保留至少有一个有效值的行）\ndf = df.dropna(how='all')\n\n    # 查看数据的基本信息\n    print(f'sheet表名为{sheet_name}的基本信息：')\n    df.info()\n\n    # 查看数据集行数和列数\n    rows, columns = df.shape\n\n    if rows < 100 and columns < 20:\n        print(f'sheet表名为{sheet_name}的全部内容信息：')\n        # 使用制表符分
+隔，空值显示为nan\n        print(df.to_csv(sep=\\t, na_rep='nan'))\n    else:\n        print(f'sheet表名为{sheet_name}的前几行内容信息：')\n        print(df.head().to_csv(sep=\\t, na_rep='nan'))","language":"python"}
+* 第一步修复arguments:
+ {'code': "import pandas as pd\\n\\n\\n# 读取文件\\nexcel_file = pd.ExcelFile('摄影相机清单.xls')\\n\\n# 获取所有表名\\nsheet_names = excel_file.sheet_names\\n\\n# 遍历不同工作表\\nfor sheet_name 
+in sheet_names:\\n    # 获取当前工作表的数据\\ndf = excel_file.parse(sheet_name)\\n\\n    # 将列名转换为字符串类型（关键修复）\\ndf.columns = df.columns.astype(str)\\n\\n    # 移除包含'Unnamed'的 
+列\\ndf = df.loc[:, ~df.columns.str.contains('Unnamed')]\\n\\n    # 移除包含nan的行（保留至少有一个有效值的行）\\ndf = df.dropna(how='all')\\n\\n    # 查看数据的基本信息\\n    print(f'sheet表名为{sheet_name}的基本信息：')\\n    df.info()\\n\\n    # 查看数据集行数和列数\\n    rows, columns = df.shape\\n\\n    if rows < 100 and columns < 20:\\n        print(f'sheet表名为{sheet_name}的全部内 
+容信息：')\\n        # 使用制表符分隔，空值显示为nan\\n        print(df.to_csv(sep='\t', na_rep='nan'))\\n    else:\\n        print(f'sheet表名为{sheet_name}的前几行内容信息：')\\n        print(df.head().to_csv(sep='\t', na_rep='nan'))", 'language': 'python'}
+* 第二步修复arguments:
+ {'code': "import pandas as pd\n\n\n# 读取文件\nexcel_file = pd.ExcelFile('摄影相机清单.xls')\n\n# 获取所有表名\nsheet_names = excel_file.sheet_names\n\n# 遍历不同工作表\nfor sheet_name in sheet_names:\n    # 获取当前工作表的数据\n    df = excel_file.parse(sheet_name)\n\n    # 将列名转换为字符串类型（关键修复）\n    df.columns = df.columns.astype(str)\n\n    # 移除包含'Unnamed'的列\n    df = df.loc[:, ~df.columns.str.contains('Unnamed')]\n\n    # 移除包含nan的行（保留至少有一个有效值的行）\n    df = df.dropna(how='all')\n\n    # 查看数据的基本信息\n    print(f'sheet表名为{sheet_name}的基本信息：')\n    df.info()\n\n    # 查看数据集行数和列数\n    rows, columns = df.shape\n\n    if rows < 100 and columns < 20:\n        print(f'sheet表名为{sheet_name}的全部内容信息：')\n     
+   # 使用制表符分隔，空值显示为nan\n        print(df.to_csv(sep='\t', na_rep='nan'))\n    else:\n        print(f'sheet表名为{sheet_name}的前几行内容信息：')\n        print(df.head().to_csv(sep='\t', na_rep='nan'))", 'language': 'python'}
+* 最终arguments:
+ {'code': "import pandas as pd\n\n\n# 读取文件\nexcel_file = pd.ExcelFile('摄影相机清单.xls')\n\n# 获取所有表名\nsheet_names = excel_file.sheet_names\n\n# 遍历不同工作表\nfor sheet_name in sheet_names:\n    # 获取当前工作表的数据\n    df = excel_file.parse(sheet_name)\n\n    # 将列名转换为字符串类型（关键修复）\n    df.columns = df.columns.astype(str)\n\n    # 移除包含'Unnamed'的列\n    df = df.loc[:, ~df.columns.str.contains('Unnamed')]\n\n    # 移除包含nan的行（保留至少有一个有效值的行）\n    df = df.dropna(how='all')\n\n    # 查看数据的基本信息\n    print(f'sheet表名为{sheet_name}的基本信息：')\n    df.info()\n\n    # 查看数据集行数和列数\n    rows, columns = df.shape\n\n    if rows < 100 and columns < 20:\n        print(f'sheet表名为{sheet_name}的全部内容信息：')\n     
+   # 使用制表符分隔，空值显示为nan\n        print(df.to_csv(sep='\t', na_rep='nan'))\n    else:\n        print(f'sheet表名为{sheet_name}的前几行内容信息：')\n        print(df.head().to_csv(sep='\t', na_rep='nan'))", 'language': 'python'}
+arguments_code:import pandas as pd
+
+
+# 读取文件
+excel_file = pd.ExcelFile('摄影相机清单.xls')
+
+# 获取所有表名
+sheet_names = excel_file.sheet_names
+
+# 遍历不同工作表
+for sheet_name in sheet_names:
+    # 获取当前工作表的数据
+    df = excel_file.parse(sheet_name)
+
+    # 将列名转换为字符串类型（关键修复）
+    df.columns = df.columns.astype(str)
+
+    # 移除包含'Unnamed'的列
+    df = df.loc[:, ~df.columns.str.contains('Unnamed')]
+
+    # 移除包含nan的行（保留至少有一个有效值的行）
+    df = df.dropna(how='all')
+
+    # 查看数据的基本信息
+    print(f'sheet表名为{sheet_name}的基本信息：')
+    df.info()
+
+    # 查看数据集行数和列数
+    rows, columns = df.shape
+
+    if rows < 100 and columns < 20:
+        print(f'sheet表名为{sheet_name}的全部内容信息：')
+        # 使用制表符分隔，空值显示为nan
+        print(df.to_csv(sep='\t', na_rep='nan'))
+    else:
+        print(f'sheet表名为{sheet_name}的前几行内容信息：')
+        print(df.head().to_csv(sep='\t', na_rep='nan'))
+arguments_code_py:```py
+import pandas as pd
+
+
+# 读取文件
+excel_file = pd.ExcelFile('摄影相机清单.xls')
+
+# 获取所有表名
+sheet_names = excel_file.sheet_names
+
+# 遍历不同工作表
+for sheet_name in sheet_names:
+    # 获取当前工作表的数据
+    df = excel_file.parse(sheet_name)
+
+    # 将列名转换为字符串类型（关键修复）
+    df.columns = df.columns.astype(str)
+
+    # 移除包含'Unnamed'的列
+    df = df.loc[:, ~df.columns.str.contains('Unnamed')]
+
+    # 移除包含nan的行（保留至少有一个有效值的行）
+    df = df.dropna(how='all')
+
+    # 查看数据的基本信息
+    print(f'sheet表名为{sheet_name}的基本信息：')
+    df.info()
+
+    # 查看数据集行数和列数
+    rows, columns = df.shape
+
+    if rows < 100 and columns < 20:
+        print(f'sheet表名为{sheet_name}的全部内容信息：')
+        # 使用制表符分隔，空值显示为nan
+        print(df.to_csv(sep='\t', na_rep='nan'))
+    else:
+        print(f'sheet表名为{sheet_name}的前几行内容信息：')
+        print(df.head().to_csv(sep='\t', na_rep='nan'))
+```
+转换成功！输出字典验证：
+import pandas as pd
+
+
+# 读取文件
+excel_file = pd.ExcelFile('摄影相机清单.xls')
+
+# 获取所有表名
+sheet_names = excel_file.sheet_names
+
+# 遍历不同工作表
+for sheet_name in sheet_names:
+    # 获取当前工作表的数据
+    df = excel_file.parse(sheet_name)
+
+    # 将列名转换为字符串类型（关键修复）
+    df.columns = df.columns.astype(str)
+
+    # 移除包含'Unnamed'的列
+    df = df.loc[:, ~df.columns.str.contains('Unnamed')]
+
+    # 移除包含nan的行（保留至少有一个有效值的行）
+    df = df.dropna(how='all')
+
+    # 查看数据的基本信息
+    print(f'sheet表名为{sheet_name}的基本信息：')
+    df.info()
+
+    # 查看数据集行数和列数
+    rows, columns = df.shape
+
+    if rows < 100 and columns < 20:
+        print(f'sheet表名为{sheet_name}的全部内容信息：')
+        # 使用制表符分隔，空值显示为nan
+        print(df.to_csv(sep='   ', na_rep='nan'))
+    else:
+        print(f'sheet表名为{sheet_name}的前几行内容信息：')
+        print(df.head().to_csv(sep='    ', na_rep='nan'))
+函数：
+ <function python_exec at 0x000001D9ED790C20>
+参数：
+ {'code': "import pandas as pd\n\n\n# 读取文件\nexcel_file = pd.ExcelFile('摄影相机清单.xls')\n\n# 获取所有表名\nsheet_names = excel_file.sheet_names\n\n# 遍历不同工作表\nfor sheet_name in sheet_names:\n    # 获取当前工作表的数据\n    df = excel_file.parse(sheet_name)\n\n    # 将列名转换为字符串类型（关键修复）\n    df.columns = df.columns.astype(str)\n\n    # 移除包含'Unnamed'的列\n    df = df.loc[:, ~df.columns.str.contains('Unnamed')]\n\n    # 移除包含nan的行（保留至少有一个有效值的行）\n    df = df.dropna(how='all')\n\n    # 查看数据的基本信息\n    print(f'sheet表名为{sheet_name}的基本信息：')\n    df.info()\n\n    # 查看数据集行数和列数\n    rows, columns = df.shape\n\n    if rows < 100 and columns < 20:\n        print(f'sheet表名为{sheet_name}的全部内容信息：')\n     
+   # 使用制表符分隔，空值显示为nan\n        print(df.to_csv(sep='\t', na_rep='nan'))\n    else:\n        print(f'sheet表名为{sheet_name}的前几行内容信息：')\n        print(df.head().to_csv(sep='\t', na_rep='nan'))", 'language': 'python'}
+2025-04-01T16:02:24.953050+0800 Executing Python code:
+import pandas as pd
+
+
+# 读取文件
+excel_file = pd.ExcelFile('摄影相机清单.xls')
+
+# 获取所有表名
+sheet_names = excel_file.sheet_names
+
+# 遍历不同工作表
+for sheet_name in sheet_names:
+    # 获取当前工作表的数据
+    df = excel_file.parse(sheet_name)
+
+    # 将列名转换为字符串类型（关键修复）
+    df.columns = df.columns.astype(str)
+
+    # 移除包含'Unnamed'的列
+    df = df.loc[:, ~df.columns.str.contains('Unnamed')]
+
+    # 移除包含nan的行（保留至少有一个有效值的行）
+    df = df.dropna(how='all')
+
+    # 查看数据的基本信息
+    print(f'sheet表名为{sheet_name}的基本信息：')
+    df.info()
+
+    # 查看数据集行数和列数
+    rows, columns = df.shape
+
+    if rows < 100 and columns < 20:
+        print(f'sheet表名为{sheet_name}的全部内容信息：')
+        # 使用制表符分隔，空值显示为nan
+        print(df.to_csv(sep='   ', na_rep='nan'))
+    else:
+        print(f'sheet表名为{sheet_name}的前几行内容信息：')
+        print(df.head().to_csv(sep='    ', na_rep='nan'))
+REPL execution result:
+import pandas as pd
+
+
+# 读取文件
+excel_file = pd.ExcelFile('摄影相机清单.xls')
+
+# 获取所有表名
+sheet_names = excel_file.sheet_names
+
+# 遍历不同工作表
+for sheet_name in sheet_names:
+    # 获取当前工作表的数据
+    df = excel_file.parse(sheet_name)
+
+    # 将列名转换为字符串类型（关键修复）
+    df.columns = df.columns.astype(str)
+
+    # 移除包含'Unnamed'的列
+    df = df.loc[:, ~df.columns.str.contains('Unnamed')]
+
+    # 移除包含nan的行（保留至少有一个有效值的行）
+    df = df.dropna(how='all')
+
+    # 查看数据的基本信息
+    print(f'sheet表名为{sheet_name}的基本信息：')
+    df.info()
+
+    # 查看数据集行数和列数
+    rows, columns = df.shape
+
+    if rows < 100 and columns < 20:
+        print(f'sheet表名为{sheet_name}的全部内容信息：')
+        # 使用制表符分隔，空值显示为nan
+        print(df.to_csv(sep='   ', na_rep='nan'))
+    else:
+        print(f'sheet表名为{sheet_name}的前几行内容信息：')
+        print(df.head().to_csv(sep='    ', na_rep='nan'))
+results:
+ [{'tool_call_id': 'Ccpt5njUncrwvTmy1vJP7MZBdnUpzCAU', 'function_name': 'python_exec', 'arguments': {'code': "import pandas as pd\n\n\n# 读取文件\nexcel_file = pd.ExcelFile('摄影相机清单.xls')\n\n# 获取所有表名\nsheet_names = excel_file.sheet_names\n\n# 遍历不同工作表\nfor sheet_name in sheet_names:\n    # 获取当前工作表的数据\n    df = excel_file.parse(sheet_name)\n\n    # 将列名转换为字 
+符串类型（关键修复）\n    df.columns = df.columns.astype(str)\n\n    # 移除包含'Unnamed'的列\n    df = df.loc[:, ~df.columns.str.contains('Unnamed')]\n\n    # 移除包含nan的行（保留至少有一个有效值
+的行）\n    df = df.dropna(how='all')\n\n    # 查看数据的基本信息\n    print(f'sheet表名为{sheet_name}的基本信息：')\n    df.info()\n\n    # 查看数据集行数和列数\n    rows, columns = df.shape\n\n 
+   if rows < 100 and columns < 20:\n        print(f'sheet表名为{sheet_name}的全部内容信息：')\n        # 使用制表符分隔，空值显示为nan\n        print(df.to_csv(sep='\t', na_rep='nan'))\n    else:\n        print(f'sheet表名为{sheet_name}的前几行内容信息：')\n        print(df.head().to_csv(sep='\t', na_rep='nan'))", 'language': 'python'}, 'function_response': 'Success executing Python code:\n\nsheet表名为Sheet1的基本信息：\n<class \'pandas.core.frame.DataFrame\'>\nIndex: 13 entries, 0 to 84\nData columns (total 8 columns):\n #   Column  Non-Null Count  Dtype  \n---  ------  --------------  -----  \n 0   类别      5 non-null      object \n 1   商品图片    0 non-null      float64\n 2   商品名称    12 non-null     object \n 3   网址      12 non-null     object \n 4   规格版本   
+ 12 non-null     object \n 5   数量      11 non-null     float64\n 6   单价      12 non-null     object \n 7   价格      12 non-null     float64\ndtypes: float64(3), object(5)\nmemory usage: 936.0+ bytes\nsheet表名为Sheet1的全部内容信息：\n\t类别\t商品图片\t商品名称\t网址\t规格版本\t数量\t单价\t价格\r\n0\t相机主体要件\tnan\t尼康（Nikon）Z5全画幅微单相机 微单套机 （ Z 24-200mm f/4-6.3 VR 微
+单镜头）Vlog相机\thttps://item.jd.com/100014311568.html\t24-200mm f/4-6.3 VR套装\t1.0\t11599\t11599.0\r\n7\t相机主体要件\tnan\t闪迪（SanDisk）64GB SD内存卡 4K V30 U3 C10 相机存储卡 读速200MB/s 写 
+速90MB/s 微单/单反相机内存卡\thttps://item.jd.com/530218.html\tV30 SD卡[4K高清|高端旗舰]\t1.0\t129\t129.0\r\n14\t相机主体要件\tnan\t绿联（UGREEN）USB3.0高速读卡器 SD/TF内存卡读卡器 支持相机单反手 
+机电脑行车记录仪监控无人机储存卡读卡器\thttps://item.jd.com/100059227590.html#crumb-wrap\tUSB3.0【SD/TF双卡槽】黑\t1.0\t19.9\t19.9\r\n21\t相机主体要件\tnan\t绿巨能（llano）尼康EL15C相机电池快充套 
+装 PD充电器 适用Z5 Z6 Z7 Z8 Z62 Z63 D7000 D7100 D7200 D7500 D800\thttps://item.jd.com/100155010102.html#none\t【1电2充】PD快充套装\t1.0\t196.2\t196.2\r\n28\t灯光与其它配件\tnan\t绿巨能（llano）相 
+机三脚架单反微单手机摄像机专业级支架 富士尼康索尼防抖拍摄三角架 便携直播录像拍照鱼灯架\thttps://item.jd.com/100077466151.html#crumb-wrap\t标准款丨10kg承重+蓝牙遥控\t1.0\t134\t134.0\r\n35\tnan\tnan\t金贝（JINBEI）摄影灯DMII400W/600W升级影室闪光灯摄影棚室内服装人像证件照补光灯电商产品拍摄打光发丝补光灯 DMII-4+DMII-6三灯套 静物拍摄升级版\thttps://item.jd.com/10057222844095.html#crumb-wrap\tDMII-4+DMII-6三灯套 静物拍摄升级版\t1.0\t4095\t4095.0\r\n42\tnan\tnan\tSelens 魔术腿C型灯架闪光灯三脚架摄影支架大型不锈钢滚轮横杆横臂旗板顶灯灯光三角架影视影棚器材 银色C型魔术腿灯架(带横杆)*2\thttps://item.jd.com/10038769226752.html#crumb-wrap\t银色C型魔术腿灯架(带横杆)*2\t1.0\t650\t650.0\r\n49\tnan\tnan\tOKLA相机联机拍摄线索尼A7M3/A7M4/R3连接苹果电脑佳能R5/R6/RP/R10富士TX3/XT4尼康D6/Z7/Z9数
+据传输 USB转Type-c联机拍摄线【8米】+固线器\thttps://item.jd.com/10078789948219.html#crumb-wrap\tUSB转Type-c联机拍摄线【8米】+固线器\t1.0\t208\t208.0\r\n56\tnan\tnan\t锐富图（Refutuna）PVC拍照摄影 
+背景板白色黑色纯色背景纸带支架 专业静物产品道具美食珠宝饰品美妆证件照拍摄背景布 白色 150*200CM（不含背景支架）\thttps://item.jd.com/38681304778.html#crumb-wrap\t白色\t1.0\t68\t68.0\r\n63\tnan\tnan\t锐富图（Refutuna）PVC拍照摄影背景板白色黑色纯色背景纸带支架 专业静物产品道具美食珠宝饰品美妆证件照拍摄背景布 灰色 150*200CM（不含背景支架）\thttps://item.jd.com/38681304780.html#crumb-wrap\t灰色
+\t1.0\t68\t68.0\r\n70\tnan\tnan\t科润乐直播摄影led补光灯常亮打光灯拍摄灯柔光灯箱 摄影棚拍照设备户外摄像道具短视频主播美颜套装\thttps://item.jd.com/100112217042.html#crumb-wrap\t【三套】大功率柔光 
+箱+2.1米灯架\t1.0\t389\t389.0\r\n77\tnan\tnan\t极川 相机包单肩斜挎摄影包 单反微单数码相机收纳包便携手提防水内胆包适用尼康内胆包佳能索尼摄像包\thttps://item.jd.com/100124028081.html#crumb-wrap\t休 
+闲摄影斜挎包【一机一架两镜】\tnan\tnan\tnan\r\n84\tnan\tnan\tnan\tnan\tnan\tnan\t合计\t17556.1\r\n\nsheet表名为Sheet2的基本信息：\n<class \'pandas.core.frame.DataFrame\'>\nRangeIndex: 0 entries\nEmpty DataFrame\nsheet表名为Sheet2的全部内容信息：\n""\r\n\nsheet表名为Sheet3的基本信息：\n<class \'pandas.core.frame.DataFrame\'>\nRangeIndex: 0 entries\nEmpty DataFrame\nsheet表名为Sheet3的全部内
+容信息：\n""\r\n\n'}]
+message_content:
+ python_exec 函数执行成功，返回结果如下：
+Success executing Python code:
+
+sheet表名为Sheet1的基本信息：
+<class 'pandas.core.frame.DataFrame'>
+Index: 13 entries, 0 to 84
+Data columns (total 8 columns):
+ #   Column  Non-Null Count  Dtype
+---  ------  --------------  -----
+ 0   类别      5 non-null      object
+ 1   商品图片    0 non-null      float64
+ 2   商品名称    12 non-null     object
+ 3   网址      12 non-null     object
+ 4   规格版本    12 non-null     object
+ 5   数量      11 non-null     float64
+ 6   单价      12 non-null     object
+ 7   价格      12 non-null     float64
+dtypes: float64(3), object(5)
+memory usage: 936.0+ bytes
+sheet表名为Sheet1的全部内容信息：
+        类别    商品图片        商品名称        网址    规格版本        数量    单价    价格
+0       相机主体要件    nan     尼康（Nikon）Z5全画幅微单相机 微单套机 （ Z 24-200mm f/4-6.3 VR 微单镜头）Vlog相机      https://item.jd.com/100014311568.html   24-200mm f/4-6.3 VR套装 1.0     11599       11599.0
+7       相机主体要件    nan     闪迪（SanDisk）64GB SD内存卡 4K V30 U3 C10 相机存储卡 读速200MB/s 写速90MB/s 微单/单反相机内存卡        https://item.jd.com/530218.html V30 SD卡[4K高清|高端旗舰]  1.0      129     129.0
+14      相机主体要件    nan     绿联（UGREEN）USB3.0高速读卡器 SD/TF内存卡读卡器 支持相机单反手机电脑行车记录仪监控无人机储存卡读卡器   https://item.jd.com/100059227590.html#crumb-wrap        USB3.0【SD/TF双卡槽】黑     1.0     19.9    19.9
+21      相机主体要件    nan     绿巨能（llano）尼康EL15C相机电池快充套装 PD充电器 适用Z5 Z6 Z7 Z8 Z62 Z63 D7000 D7100 D7200 D7500 D800  https://item.jd.com/100155010102.html#none      【1电2充】PD快充套装        1.0     196.2   196.2
+28      灯光与其它配件  nan     绿巨能（llano）相机三脚架单反微单手机摄像机专业级支架 富士尼康索尼防抖拍摄三角架 便携直播录像拍照鱼灯架 https://item.jd.com/100077466151.html#crumb-wrap        标准
+款丨10kg承重+蓝牙遥控   1.0     134     134.0
+35      nan     nan     金贝（JINBEI）摄影灯DMII400W/600W升级影室闪光灯摄影棚室内服装人像证件照补光灯电商产品拍摄打光发丝补光灯 DMII-4+DMII-6三灯套 静物拍摄升级版      https://item.jd.com/10057222844095.html#crumb-wrap  DMII-4+DMII-6三灯套 静物拍摄升级版      1.0     4095    4095.0
+42      nan     nan     Selens 魔术腿C型灯架闪光灯三脚架摄影支架大型不锈钢滚轮横杆横臂旗板顶灯灯光三角架影视影棚器材 银色C型魔术腿灯架(带横杆)*2        https://item.jd.com/10038769226752.html#crumb-wrap  银色C型魔术腿灯架(带横杆)*2     1.0     650     650.0
+49      nan     nan     OKLA相机联机拍摄线索尼A7M3/A7M4/R3连接苹果电脑佳能R5/R6/RP/R10富士TX3/XT4尼康D6/Z7/Z9数据传输 USB转Type-c联机拍摄线【8米】+固线器       https://item.jd.com/10078789948219.html#crumb-wrap  USB转Type-c联机拍摄线【8米】+固线器     1.0     208     208.0
+56      nan     nan     锐富图（Refutuna）PVC拍照摄影背景板白色黑色纯色背景纸带支架 专业静物产品道具美食珠宝饰品美妆证件照拍摄背景布 白色 150*200CM（不含背景支架）     https://item.jd.com/38681304778.html#crumb-wrap     白色    1.0     68      68.0
+63      nan     nan     锐富图（Refutuna）PVC拍照摄影背景板白色黑色纯色背景纸带支架 专业静物产品道具美食珠宝饰品美妆证件照拍摄背景布 灰色 150*200CM（不含背景支架）     https://item.jd.com/38681304780.html#crumb-wrap     灰色    1.0     68      68.0
+70      nan     nan     科润乐直播摄影led补光灯常亮打光灯拍摄灯柔光灯箱 摄影棚拍照设备户外摄像道具短视频主播美颜套装    https://item.jd.com/100112217042.html#crumb-wrap        【三套】大功率柔光箱
++2.1米灯架      1.0     389     389.0
+77      nan     nan     极川 相机包单肩斜挎摄影包 单反微单数码相机收纳包便携手提防水内胆包适用尼康内胆包佳能索尼摄像包  https://item.jd.com/100124028081.html#crumb-wrap        休闲摄影斜挎包【一机
+一架两镜】      nan     nan     nan
+84      nan     nan     nan     nan     nan     nan     合计    17556.1
+
+sheet表名为Sheet2的基本信息：
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 0 entries
+Empty DataFrame
+sheet表名为Sheet2的全部内容信息：
+""
+
+sheet表名为Sheet3的基本信息：
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 0 entries
+Empty DataFrame
+sheet表名为Sheet3的全部内容信息：
+""
