@@ -25,3 +25,12 @@
 2025-06-28 01:27:42,010 - lightrag - INFO - Process 13708 doc status load doc_status with 1 records
 2025-06-28 01:27:42,011 - uvicorn.error - INFO - Application startup complete.
 2025-06-28 01:27:42,014 - uvicorn.error - INFO - Uvicorn running on http://localhost:9721 (Press CTRL+C to quit)
+2025-06-29 08:06:33,057 - lightrag - INFO - Loaded graph from D:\chainlit\chainlit-datalayer\demo_app\RAG_working_dir\graph_chunk_entity_relation.graphml with 110 nodes, 88 edges
+2025-06-29 08:06:33,140 - uvicorn.error - INFO - Started server process [12904]
+2025-06-29 08:06:33,141 - uvicorn.error - INFO - Waiting for application startup.
+2025-06-29 08:06:33,142 - lightrag - INFO - Process 12904 KV load full_docs with 1 records
+2025-06-29 08:06:33,143 - lightrag - INFO - Process 12904 KV load text_chunks with 10 records
+2025-06-29 08:06:33,147 - lightrag - INFO - Process 12904 KV load llm_response_cache with 34 records
+2025-06-29 08:06:33,148 - lightrag - INFO - Process 12904 doc status load doc_status with 1 records
+2025-06-29 08:06:33,148 - uvicorn.error - INFO - Application startup complete.
+2025-06-29 08:06:33,151 - uvicorn.error - INFO - Uvicorn running on http://localhost:9721 (Press CTRL+C to quit)

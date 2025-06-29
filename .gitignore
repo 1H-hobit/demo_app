@@ -7,3 +7,5 @@ my-bucket/*
 conversation
 minio.exe
 *.env
+lightrag.log
+.env
