@@ -123,6 +123,7 @@ def load_ocr_model():
     ocr_model = AutoModel.from_pretrained(
         MODEL_NAME,
         load_in_8bit=True,
+        #load_in_4bit=True,
         torch_dtype=torch.bfloat16,
         low_cpu_mem_usage=True,
         use_flash_attn=True,
