@@ -31,6 +31,20 @@ auto_tag_thread = true
 # Allow users to edit their own messages
 edit_message = true
 
+[features.mcp.sse]
+    # Enable or disable the SSE connection type globally
+    enabled = true
+
+[features.mcp.stdio]
+    # Enable or disable the stdio connection type globally
+    enabled = true
+    # Define an allowlist of executables for the stdio type.
+    # Only the base names of executables listed here can be used.
+    # This is a crucial security measure for stdio connections.
+    # Example: allows running `npx ...` and `uvx ...` but blocks others.
+    allowed_executables = [ "npx", "uvx" ]
+
+
 # Authorize users to spontaneously upload files with messages
 [features.spontaneous_file_upload]
     enabled = true

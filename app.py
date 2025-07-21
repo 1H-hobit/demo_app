@@ -40,6 +40,7 @@ from ligrag_function_class import QueryConfig , LightRAGClient
 import opencc
 from decord import VideoReader, cpu
 import numpy as np
+from mcp import ClientSession
 
 @cl.data_layer
 def get_data_layer():
@@ -914,6 +915,73 @@ def fix_indentation(code_str):
             indent_level += 1
             
     return '\n'.join(lines)
+
+
+
+# 当 MCP 连接时触发的异步函数
+@cl.on_mcp_connect
+async def on_mcp(connection, session: ClientSession):
+    # 获取当前 MCP 连接的所有可用工具
+    result = await session.list_tools()
+    # 整理工具信息，将其转换为字典形式
+    tools = [{
+        "name": t.name,
+        "description": t.description,
+        "input_schema": t.inputSchema,
+        } for t in result.tools]
+    
+    # 从用户会话中获取已有的 MCP 工具列表
+    mcp_tools = cl.user_session.get("mcp_tools", {})
+    # 将当前连接的工具添加到 MCP 工具列表中
+    mcp_tools[connection.name] = tools
+    # 更新用户会话中的 MCP 工具列表
+    cl.user_session.set("mcp_tools", mcp_tools)
+
+# 工具调用步骤的异步函数
+@cl.step(type="tool") 
+async def call_tool(tool_use):
+    # 获取工具名称
+    tool_name = tool_use.name
+    # 获取工具输入
+    tool_input = tool_use.input
+    
+    # 获取当前步骤
+    current_step = cl.context.current_step
+    # 设置当前步骤的名称为工具名称
+    current_step.name = tool_name
+    
+    # 识别使用的 MCP
+    mcp_tools = cl.user_session.get("mcp_tools", {})
+    mcp_name = None
+
+    # 遍历 MCP 工具列表，查找工具所在的 MCP 连接
+    for connection_name, tools in mcp_tools.items():
+        if any(tool.get("name") == tool_name for tool in tools):
+            mcp_name = connection_name
+            break
+    
+    # 如果未找到工具所在的 MCP 连接，记录错误信息
+    if not mcp_name:
+        current_step.output = json.dumps({"error": f"Tool {tool_name} not found in any MCP connection"})
+        return current_step.output
+    
+    # 获取 MCP 会话
+    mcp_session, _ = cl.context.session.mcp_sessions.get(mcp_name)
+    
+    # 如果未找到 MCP 会话，记录错误信息
+    if not mcp_session:
+        current_step.output = json.dumps({"error": f"MCP {mcp_name} not found in any MCP connection"})
+        return current_step.output
+    
+    try:
+        # 调用 MCP 工具并记录输出
+        current_step.output = await mcp_session.call_tool(tool_name, tool_input)
+    except Exception as e:
+        # 处理调用工具时的异常，记录错误信息
+        current_step.output = json.dumps({"error": str(e)})
+    
+    return current_step.output
+
 
 
 # ======================== 工具调用处理 ========================
