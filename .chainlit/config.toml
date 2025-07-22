@@ -42,7 +42,7 @@ edit_message = true
     # Only the base names of executables listed here can be used.
     # This is a crucial security measure for stdio connections.
     # Example: allows running `npx ...` and `uvx ...` but blocks others.
-    allowed_executables = [ "npx", "uvx" ]
+    #allowed_executables = [ "npx", "uvx" ]
 
 
 # Authorize users to spontaneously upload files with messages
