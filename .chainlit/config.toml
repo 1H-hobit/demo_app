@@ -43,7 +43,6 @@ edit_message = true
     # This is a crucial security measure for stdio connections.
     # Example: allows running `npx ...` and `uvx ...` but blocks others.
     #allowed_executables = [ "npx", "uvx" ]
-    allowed_executables = { "npx" = "C:\Program Files\nodejs\npx.cmd" }
 
 
 # Authorize users to spontaneously upload files with messages
