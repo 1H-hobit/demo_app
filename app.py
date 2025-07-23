@@ -885,38 +885,9 @@ async def update_voice_mode_selector(mode: str,initial=True):
         ]
     ).send()
 
-# ======================== python_exec函数的code修复缩进与字符转义 ========================
-def fix_indentation(code_str):
-    lines = []
-    indent_level = 0
-    block_keywords = {'for', 'if', 'else', 'elif', 'while', 'def', 'class', 'try', 'except', 'with'}
-    
-    for line in code_str.split('\n'):
-        stripped = line.strip()
-        if not stripped:
-            lines.append('')
-            continue
-        
-        # 检测是否是块关键字（如 if, for 等）
-        is_block = any(
-            re.match(rf'^{kw}\b.*:$', stripped)
-            for kw in block_keywords
-        )
-        
-        # 处理 else/elif 的特殊情况
-        if stripped.startswith(('else', 'elif')):
-            indent_level = max(0, indent_level - 1)
-        
-        # 添加当前缩进
-        lines.append('    ' * indent_level + stripped)
-        
-        # 如果是块关键字，增加缩进
-        if is_block:
-            indent_level += 1
-            
-    return '\n'.join(lines)
 
 
+# ======================== MCP工具调用处理 ========================
 
 # 当 MCP 连接时触发的异步函数
 @cl.on_mcp_connect
@@ -936,6 +907,13 @@ async def on_mcp(connection, session: ClientSession):
     mcp_tools[connection.name] = tools
     # 更新用户会话中的 MCP 工具列表
     cl.user_session.set("mcp_tools", mcp_tools)
+
+
+# 2. 处理MCP连接断开
+@cl.on_mcp_disconnect
+async def on_mcp_disconnect(name: str, session: ClientSession):
+    await cl.Message(content=f"Excel MCP服务器 '{name}' 已断开连接").send()
+
 
 # 工具调用步骤的异步函数
 @cl.step(type="tool") 
@@ -982,6 +960,37 @@ async def call_tool(tool_use):
     
     return current_step.output
 
+
+# ======================== python_exec函数的code修复缩进与字符转义 ========================
+def fix_indentation(code_str):
+    lines = []
+    indent_level = 0
+    block_keywords = {'for', 'if', 'else', 'elif', 'while', 'def', 'class', 'try', 'except', 'with'}
+    
+    for line in code_str.split('\n'):
+        stripped = line.strip()
+        if not stripped:
+            lines.append('')
+            continue
+        
+        # 检测是否是块关键字（如 if, for 等）
+        is_block = any(
+            re.match(rf'^{kw}\b.*:$', stripped)
+            for kw in block_keywords
+        )
+        
+        # 处理 else/elif 的特殊情况
+        if stripped.startswith(('else', 'elif')):
+            indent_level = max(0, indent_level - 1)
+        
+        # 添加当前缩进
+        lines.append('    ' * indent_level + stripped)
+        
+        # 如果是块关键字，增加缩进
+        if is_block:
+            indent_level += 1
+            
+    return '\n'.join(lines)
 
 
 # ======================== 工具调用处理 ========================
