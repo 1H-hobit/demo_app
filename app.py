@@ -86,6 +86,7 @@ tts = None
 image_model = None
 is_stop = False
 is_tools = False
+is_mcp_tools = False
 ocr_model = None
 ocr_tokenizer = None
 num_patches_list = None
@@ -94,7 +95,7 @@ MAX_ITER = 100
 # 配置项
 TEMP_DIR = Path("tts_temp")
 TEMP_DIR.mkdir(exist_ok=True)
-valid_modes = ["text_mode", "image_mode", "knowledge_mode", "web_search_mode", "qa_mode", "image_ocr_ai_mode","image_ocr_mode","calling_tools", "voice_mode"]
+valid_modes = ["text_mode", "image_mode", "knowledge_mode", "web_search_mode", "qa_mode", "image_ocr_ai_mode","image_ocr_mode","calling_tools", "voice_mode", "mcp_calling_tools"]
 
 # ======================== commands消息处理 ========================
 commands = [
@@ -336,8 +337,6 @@ async def stop_chat():
 # ======================== on_message_tools消息处理 ========================
 async def on_message_tools(message: cl.Message):
     global is_stop
-
-
     cur_iter = 0
     tool_call_id = True
     user_message = message.content
@@ -420,6 +419,7 @@ async def main(message: cl.Message):
     current_mode = cl.user_session.get("processing_mode")
     print(f"当前模式: {current_mode}")  # 添加调试输出
     global is_tools
+    global is_mcp_tools
 
     # 模式有效性验证
     if current_mode not in valid_modes:
@@ -431,6 +431,11 @@ async def main(message: cl.Message):
         is_tools = False
     else:
         is_tools = True
+
+    if current_mode != "mcp_calling_tools":  
+        is_mcp_tools = False
+    else:
+        is_mcp_tools = True
 
     # 根据模式处理消息
     if current_mode == "image_mode":
@@ -494,8 +499,14 @@ async def main(message: cl.Message):
 @cl.on_message
 async def run_conversation(message: cl.Message):
     global is_tools
+    global is_mcp_tools
     if is_tools:
         await on_message_tools(message)
+
+    print ("is_mcp_tools:\n",is_mcp_tools)
+
+    if is_mcp_tools:
+        await on_message_mcp_tools(message)
     else:
         await main(message)
 
@@ -507,6 +518,7 @@ async def setup_agent(settings):
     global image_processor
     global image_model
     global is_tools
+    global is_mcp_tools
     global tts
     global ocr_model
     global ocr_tokenizer
@@ -518,6 +530,11 @@ async def setup_agent(settings):
     if settings.get("describe") == None:  #对应的值是否不为空
         await cl.Message(content=f"处理模式为: {mode_value}").send()
     cl.user_session.set("processing_mode", mode_value)
+
+    if mode_value != "mcp_calling_tools":  
+        is_mcp_tools = False
+    else:
+        is_mcp_tools = True
 
     if mode_value != "calling_tools":  
         await cl.context.emitter.set_commands([])
@@ -830,6 +847,7 @@ async def update_mode_selector(mode: str):
                     "图片OCR": "image_ocr_mode",
                     "调用tools工具": "calling_tools",
                     "语音回复": "voice_mode",
+                    "调用MCP工具": "mcp_calling_tools",
                 },
                 initial_value=mode,
             ),
@@ -854,6 +872,7 @@ async def update_image_ocr_ai_mode_selector(mode: str,initial=True):
                     "图片OCR": "image_ocr_mode",
                     "调用tools工具": "calling_tools",
                     "语音回复": "voice_mode",
+                    "调用MCP工具": "mcp_calling_tools",
                 },
                 initial_value=mode,
             ),
@@ -878,6 +897,7 @@ async def update_voice_mode_selector(mode: str,initial=True):
                     "图片OCR": "image_ocr_mode",
                     "调用tools工具": "calling_tools",
                     "语音回复": "voice_mode",
+                    "调用MCP工具": "mcp_calling_tools",
                 },
                 initial_value=mode,
             ),
@@ -912,53 +932,174 @@ async def on_mcp(connection, session: ClientSession):
 # 2. 处理MCP连接断开
 @cl.on_mcp_disconnect
 async def on_mcp_disconnect(name: str, session: ClientSession):
-    await cl.Message(content=f"Excel MCP服务器 '{name}' 已断开连接").send()
+    await cl.Message(content=f"MCP服务器 '{name}' 已断开连接").send()
 
 
 # 工具调用步骤的异步函数
 @cl.step(type="tool") 
-async def call_tool(tool_use):
-    # 获取工具名称
-    tool_name = tool_use.name
-    # 获取工具输入
-    tool_input = tool_use.input
-    
-    # 获取当前步骤
+async def call_mcp_tool(tool_name, tool_input):
+    """调用MCP工具并返回结果"""
+    # 获取当前步骤用于跟踪工具调用
     current_step = cl.context.current_step
-    # 设置当前步骤的名称为工具名称
     current_step.name = tool_name
     
-    # 识别使用的 MCP
+    # 查找工具所在的MCP连接
     mcp_tools = cl.user_session.get("mcp_tools", {})
     mcp_name = None
-
-    # 遍历 MCP 工具列表，查找工具所在的 MCP 连接
     for connection_name, tools in mcp_tools.items():
         if any(tool.get("name") == tool_name for tool in tools):
             mcp_name = connection_name
             break
     
-    # 如果未找到工具所在的 MCP 连接，记录错误信息
+    # 错误处理：未找到工具
     if not mcp_name:
-        current_step.output = json.dumps({"error": f"Tool {tool_name} not found in any MCP connection"})
-        return current_step.output
+        error_msg = f"工具 {tool_name} 未在任何MCP连接中找到"
+        current_step.output = json.dumps({"error": error_msg})
+        return error_msg
     
-    # 获取 MCP 会话
+    # 获取MCP会话
     mcp_session, _ = cl.context.session.mcp_sessions.get(mcp_name)
-    
-    # 如果未找到 MCP 会话，记录错误信息
     if not mcp_session:
-        current_step.output = json.dumps({"error": f"MCP {mcp_name} not found in any MCP connection"})
-        return current_step.output
+        error_msg = f"MCP连接 {mcp_name} 未找到"
+        current_step.output = json.dumps({"error": error_msg})
+        return error_msg
     
     try:
-        # 调用 MCP 工具并记录输出
-        current_step.output = await mcp_session.call_tool(tool_name, tool_input)
+        # 实际调用MCP工具
+        result = await mcp_session.call_tool(tool_name, tool_input)
+        current_step.output = result
+        return result
     except Exception as e:
-        # 处理调用工具时的异常，记录错误信息
-        current_step.output = json.dumps({"error": str(e)})
-    
-    return current_step.output
+        error_msg = f"调用工具 {tool_name} 时出错: {str(e)}"
+        current_step.output = json.dumps({"error": error_msg})
+        return error_msg
+
+
+
+# ======================== on_message_mcp_tools消息处理 ========================
+async def on_message_mcp_tools(message: cl.Message):
+
+    cur_iter = 0
+    tool_call_id = True
+    # 获取用户会话中的 MCP 工具字典
+    mcp_tools_dict = cl.user_session.get("mcp_tools", {})
+
+    # 合并所有连接的工具列表
+    all_tools = []
+    for tools_list in mcp_tools_dict.values():
+        all_tools.extend(tools_list)
+
+
+    # 转换工具格式以适应OpenAI的函数调用要求
+    openai_tools = []
+    for tool in all_tools:  # 现在tool是字典
+        openai_tool = {
+            "type": "function",
+            "function": {
+                "name": tool["name"],
+                "description": tool["description"],
+                "parameters": tool["input_schema"]
+            }
+        }
+        openai_tools.append(openai_tool)
+
+    # 打印工具名称列表，方便调试
+    print("openai_tools:\n",openai_tools)
+
+    user_message = message.content
+    cl.user_session.set("user_message", user_message)
+    message_history = cl.user_session.get("message_history", [])
+    message_history.append({"role": "user", "content": user_message})
+
+    # 消息历史管理（保持原有逻辑）
+    if len(message_history) > 20:
+        message_history = [message_history[0]] + message_history[-39:]
+
+    while cur_iter < MAX_ITER:
+        # 每次请求前重新注入系统提示
+        current_system_message = get_system_message(openai_tools, language)
+        
+        # 检查 enhanced_history 是否已经包含系统消息
+        system_message_exists = any(
+            msg["role"] == "system" and msg["content"] == current_system_message
+            for msg in message_history
+        )
+        
+        # 如果没有系统消息，则添加
+        if not system_message_exists:
+            enhanced_history = [
+                {"role": "system", "content": current_system_message},
+                *[msg for msg in message_history if msg["role"] != "system"]
+            ]
+        else:
+            enhanced_history = message_history
+
+        #如果 tool_call_id 无效或不存在，则终止循环。
+        if not tool_call_id:
+            break
+
+        #print (enhanced_history)
+        tool_call_id = await tool_mcp_calls(enhanced_history, openai_tools)
+
+        cur_iter += 1
+        continue
+
+
+# ======================== tool_mcp_calls流式请求处理 ========================
+async def tool_mcp_calls(message_history: list, tools:any):
+    # 工具调用处理（非流式）
+    full_resp = await client.chat.completions.create(
+        model=os.environ.get("LLM_MODEL"),
+        messages=message_history,
+        tools=tools,
+        tool_choice="auto",
+        timeout=300.0,  # 增加超时时间
+        temperature=0
+    )
+    #print ("full_resp:\n", full_resp)
+    openai_message = full_resp.choices[0].message
+    content = openai_message.content or ""
+
+    # 处理工具调用请求
+    if full_resp.choices[0].message.tool_calls:
+        # 取第一个工具调用
+        tool_call = full_resp.choices[0].message.tool_calls[0]
+        tool_use_id = tool_call.id
+        tool_name = tool_call.function.name
+        tool_input = json.loads(tool_call.function.arguments)
+        
+        # 调用其他MCP工具
+        result = await call_mcp_tool(tool_name, tool_input)
+        print ("results:\n",result)
+
+        message_history = cl.user_session.get("message_history", [])
+        # 将工具调用结果添加到消息历史
+        message_history.extend([
+            {
+                "role": "assistant",
+                "content": None,
+                "tool_calls": [
+                    {
+                        "id": tool_use_id,
+                        "type": "function",
+                        "function": {
+                            "name": tool_name,
+                            "arguments": json.dumps(tool_input)
+                        }
+                    }
+                ]
+            },
+            {
+                "role": "tool",
+                "content": str(result),
+                "tool_call_id": tool_use_id
+            }
+        ])
+        return tool_use_id
+    else:
+        # 没有工具调用，返回最终响应
+        await handle_text_input(message_history , content)
+        return None
 
 
 # ======================== python_exec函数的code修复缩进与字符转义 ========================
@@ -1088,7 +1229,7 @@ async def process_tool_calls(openai_message: ChatCompletionMessage) -> dict:
     return results
 
 
-# ======================== 流式请求处理 ========================
+# ======================== function_calls流式请求处理 ========================
 async def tool_calls(message_history: list):
     # 第一阶段：工具调用处理（非流式）
     full_resp = await client.chat.completions.create(
@@ -1813,7 +1954,7 @@ async def handle_text_input(history: list, user_input: str):
         async for chunk in response_stream:
             token = chunk.choices[0].delta.content
             if token:
-                print(token, end="\n", flush=True)
+                #print(token, end="\n", flush=True)
                 # 直接替换所有目标字符，无需条件判断
                 token = token.replace("\\(", "$")  # 替换反斜杠加(
                 token = token.replace("\\)", "$")   # 替换反斜杠加)
