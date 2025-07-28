@@ -116,7 +116,7 @@ def get_tts():
 
 # ======================== OCR模型加载 ========================
 # 配置参数
-MODEL_NAME = r"D:\chainlit\models\InternVL3-8B"
+MODEL_NAME = r"D:\chainlit\models\InternVL3-14B-Instruct"
 # ======================== OCR模型加载 ========================
 def load_ocr_model():
     global ocr_model
@@ -124,8 +124,8 @@ def load_ocr_model():
 
     ocr_model = AutoModel.from_pretrained(
         MODEL_NAME,
-        load_in_8bit=True,
-        #load_in_4bit=True,
+        #load_in_8bit=True,
+        load_in_4bit=True,
         torch_dtype=torch.bfloat16,
         low_cpu_mem_usage=True,
         use_flash_attn=True,

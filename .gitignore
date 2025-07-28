@@ -10,3 +10,4 @@ minio.exe
 .env
 modelscope
 lightrag.log
+MCP/*
