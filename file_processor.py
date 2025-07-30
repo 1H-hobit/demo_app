@@ -5,7 +5,7 @@ import chardet
 import fitz  # PyMuPDF
 import textract
 from langchain_community.document_loaders import PyMuPDFLoader  # 修改后的导入语句
-from ocr_utils import process_image_ocr
+#from ocr_utils import process_image_ocr
 
 def process_file(file_path):
     text = ""
@@ -50,42 +50,42 @@ def process_file(file_path):
                     error_msg = f"终极解码失败: {str(final_error)}"
                     raise ValueError(error_msg)
 
-    elif file_path.lower().endswith('.pdf'):
-        # 使用 PyMuPDFLoader 加载 PDF 文件
-        loader = PyMuPDFLoader(str(file_path))
-        docs = loader.load()
+    # elif file_path.lower().endswith('.pdf'):
+    #     # 使用 PyMuPDFLoader 加载 PDF 文件
+    #     loader = PyMuPDFLoader(str(file_path))
+    #     docs = loader.load()
 
-        # 假设 docs 是包含所有 Document 对象的列表
-        combined_content = ""
+    #     # 假设 docs 是包含所有 Document 对象的列表
+    #     combined_content = ""
 
-        # 遍历每个 Document 对象
-        for doc in docs:
-            # 提取 page_content 并添加到 combined_content 中
-            if doc.page_content.strip():  # 检查 page_content 是否为空
-                combined_content += doc.page_content + "\n"  # 添加换行符以分隔不同页的内容
-            else:
-                # 如果 page_content 为空，使用 easyocr 识别该页
-                pdf_document = fitz.open(file_path)
-                page = pdf_document.load_page(doc.metadata.get("page", 0))  # 获取当前页
+    #     # 遍历每个 Document 对象
+    #     for doc in docs:
+    #         # 提取 page_content 并添加到 combined_content 中
+    #         if doc.page_content.strip():  # 检查 page_content 是否为空
+    #             combined_content += doc.page_content + "\n"  # 添加换行符以分隔不同页的内容
+    #         else:
+    #             # 如果 page_content 为空，使用 easyocr 识别该页
+    #             pdf_document = fitz.open(file_path)
+    #             page = pdf_document.load_page(doc.metadata.get("page", 0))  # 获取当前页
 
-                # 将 PDF 页面转换为图片
-                pix = page.get_pixmap()
-                temp_image_path = tempfile.mktemp(suffix=".png")
-                pix.save(temp_image_path)
+    #             # 将 PDF 页面转换为图片
+    #             pix = page.get_pixmap()
+    #             temp_image_path = tempfile.mktemp(suffix=".png")
+    #             pix.save(temp_image_path)
 
-                # 使用 easyocr 识别图片内容
-                loop = asyncio.get_event_loop()
-                ocr_text = loop.run_until_complete(process_image_ocr(temp_image_path))
+    #             # 使用 easyocr 识别图片内容
+    #             loop = asyncio.get_event_loop()
+    #             ocr_text = loop.run_until_complete(process_image_ocr(temp_image_path))
 
-                # 将 OCR 识别的内容添加到 combined_content
-                combined_content += ocr_text + "\n"
+    #             # 将 OCR 识别的内容添加到 combined_content
+    #             combined_content += ocr_text + "\n"
 
-                # 删除临时图片文件
-                os.remove(temp_image_path)
+    #             # 删除临时图片文件
+    #             os.remove(temp_image_path)
 
-        # 打印或返回合并后的字符串
-        text = combined_content
-        print(text)
+    #     # 打印或返回合并后的字符串
+    #     text = combined_content
+    #     print(text)
     
     else:
         # 其他文件类型使用 textract 处理

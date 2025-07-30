@@ -7,16 +7,16 @@ from PIL import Image
 import torch
 import os
 import json
-from minirag import MiniRAG, QueryParam
-from minirag.llm.openai import openai_complete_if_cache, openai_embed
-from minirag.utils import EmbeddingFunc
+# from minirag import MiniRAG, QueryParam
+# from minirag.llm.openai import openai_complete_if_cache, openai_embed
+# from minirag.utils import EmbeddingFunc
 import requests
 import chainlit as cl
 from chainlit.data.sql_alchemy import SQLAlchemyDataLayer
 from local_storage import MinIOStorageClient
 import asyncio
 from chain_setup import initialize_chain
-from ocr_utils import process_image_ocr
+#from ocr_utils import process_image_ocr
 from file_processor import process_file
 import ast
 from functions.FunctionManager import FunctionManager
@@ -95,7 +95,7 @@ MAX_ITER = 100
 # 配置项
 TEMP_DIR = Path("tts_temp")
 TEMP_DIR.mkdir(exist_ok=True)
-valid_modes = ["text_mode", "image_mode", "knowledge_mode", "web_search_mode", "qa_mode", "image_ocr_ai_mode","image_ocr_mode","calling_tools", "voice_mode", "mcp_calling_tools"]
+valid_modes = ["text_mode", "image_mode", "knowledge_mode", "web_search_mode", "qa_mode", "image_ocr_ai_mode","calling_tools", "voice_mode", "mcp_calling_tools"]
 
 # ======================== commands消息处理 ========================
 commands = [
@@ -142,35 +142,35 @@ def load_ocr_model():
 
 
 # ======================== MiniRAG初始化 ========================
-async def openai_llm_complete(prompt, max_tokens=1024, **kwargs):
-    return await openai_complete_if_cache(
-        base_url=os.environ.get("LLM_BINDING_HOST"),
-        api_key=os.environ.get("OPENAI_API_KEY"),
-        model=os.environ.get("LLM_MODEL"),
-        prompt=prompt,
-        max_tokens=max_tokens,
-        **kwargs
-    )
+# async def openai_llm_complete(prompt, max_tokens=1024, **kwargs):
+#     return await openai_complete_if_cache(
+#         base_url=os.environ.get("LLM_BINDING_HOST"),
+#         api_key=os.environ.get("OPENAI_API_KEY"),
+#         model=os.environ.get("LLM_MODEL"),
+#         prompt=prompt,
+#         max_tokens=max_tokens,
+#         **kwargs
+#     )
 
-async def openai_embedding_func(texts):
-    return await openai_embed(
-        texts=texts,
-        model=os.environ.get("EMBEDDING_MODEL"),
-        base_url=os.environ.get("EMBEDDING_BINDING_HOST"),
-        api_key=os.environ.get("EMBEDDING_BINDING_API_KEY"),
-    )
+# async def openai_embedding_func(texts):
+#     return await openai_embed(
+#         texts=texts,
+#         model=os.environ.get("EMBEDDING_MODEL"),
+#         base_url=os.environ.get("EMBEDDING_BINDING_HOST"),
+#         api_key=os.environ.get("EMBEDDING_BINDING_API_KEY"),
+#     )
 
-rag = MiniRAG(
-    working_dir=r"D:\chainlit\chainlit-datalayer\demo_app\RAG_working_dir",
-    llm_model_func=openai_llm_complete,
-    llm_model_max_token_size=1024,
-    llm_model_name=os.environ.get("LLM_MODEL"),
-    embedding_func=EmbeddingFunc(
-        embedding_dim=int(os.environ.get("EMBEDDING_DIM")),
-        max_token_size=1024,
-        func=openai_embedding_func
-    ),
-)
+# rag = MiniRAG(
+#     working_dir=r"D:\chainlit\chainlit-datalayer\demo_app\RAG_working_dir",
+#     llm_model_func=openai_llm_complete,
+#     llm_model_max_token_size=1024,
+#     llm_model_name=os.environ.get("LLM_MODEL"),
+#     embedding_func=EmbeddingFunc(
+#         embedding_dim=int(os.environ.get("EMBEDDING_DIM")),
+#         max_token_size=1024,
+#         func=openai_embedding_func
+#     ),
+# )
 
 # ======================== 加载插件功能 ========================
 plugin_dirs = [
@@ -463,10 +463,10 @@ async def main(message: cl.Message):
         # 图片OCR处理逻辑
         await handle_image_ai_ocr(message)
 
-    elif current_mode == "image_ocr_mode":
-        # 图片OCR处理逻辑
-        #await update_mode_selector(current_mode)  # 同步更新设置面板
-        await handle_image_ocr(message)
+    # elif current_mode == "image_ocr_mode":
+    #     # 图片OCR处理逻辑
+    #     #await update_mode_selector(current_mode)  # 同步更新设置面板
+    #     await handle_image_ocr(message)
 
 
     elif current_mode == "qa_mode":
@@ -844,7 +844,6 @@ async def update_mode_selector(mode: str):
                     "联网搜索": "web_search_mode",
                     "文件问答": "qa_mode",
                     "AI图片OCR": "image_ocr_ai_mode",
-                    "图片OCR": "image_ocr_mode",
                     "调用tools工具": "calling_tools",
                     "语音回复": "voice_mode",
                     "调用MCP工具": "mcp_calling_tools",
@@ -869,7 +868,6 @@ async def update_image_ocr_ai_mode_selector(mode: str,initial=True):
                     "联网搜索": "web_search_mode",
                     "文件问答": "qa_mode",
                     "AI图片OCR": "image_ocr_ai_mode",
-                    "图片OCR": "image_ocr_mode",
                     "调用tools工具": "calling_tools",
                     "语音回复": "voice_mode",
                     "调用MCP工具": "mcp_calling_tools",
@@ -894,7 +892,6 @@ async def update_voice_mode_selector(mode: str,initial=True):
                     "联网搜索": "web_search_mode",
                     "文件问答": "qa_mode",
                     "AI图片OCR": "image_ocr_ai_mode",
-                    "图片OCR": "image_ocr_mode",
                     "调用tools工具": "calling_tools",
                     "语音回复": "voice_mode",
                     "调用MCP工具": "mcp_calling_tools",
@@ -1273,26 +1270,26 @@ async def tool_calls(message_history: list):
         return results
 
 # ======================== 图片OCR处理模块 ========================
-async def handle_image_ocr(message: cl.Message):
-    if not message.elements or not message.elements[0].mime.startswith("image"):
-        await cl.Message("❌ 请上传图片文件").send()
-        return
+# async def handle_image_ocr(message: cl.Message):
+#     if not message.elements or not message.elements[0].mime.startswith("image"):
+#         await cl.Message("❌ 请上传图片文件").send()
+#         return
     
-    image = message.elements[0]
-    await cl.Message("🖼️ 正在进行OCR处理...").send()
+#     image = message.elements[0]
+#     await cl.Message("🖼️ 正在进行OCR处理...").send()
 
-    await asyncio.sleep(0.1)  # 添加短暂延迟确保UI更新
+#     await asyncio.sleep(0.1)  # 添加短暂延迟确保UI更新
 
-    try:
-        ocr_text = await process_image_ocr(image.path)
-        if ocr_text:
-            await cl.Message(f"**OCR识别内容**\n\n{ocr_text}").send()
-        else:
-            await cl.Message("❌ 未识别到有效文本").send()
-    except Exception as e:
-        await cl.Message(f"❌ OCR处理失败: {str(e)}").send()
-    finally:
-        message.elements = []  # 清空消息中的图片元素
+#     try:
+#         ocr_text = await process_image_ocr(image.path)
+#         if ocr_text:
+#             await cl.Message(f"**OCR识别内容**\n\n{ocr_text}").send()
+#         else:
+#             await cl.Message("❌ 未识别到有效文本").send()
+#     except Exception as e:
+#         await cl.Message(f"❌ OCR处理失败: {str(e)}").send()
+#     finally:
+#         message.elements = []  # 清空消息中的图片元素
 
 # ======================== 语音回复处理模块 ========================
 async def handle_voice_mode(message: cl.Message):
