@@ -79,62 +79,96 @@ def main():
     
     sort_method = sort_methods.get(choice, "natural")
     
-    # 排序文件
-    sorted_files = sort_filenames(all_files, sort_method)
+    # 按文件扩展名分组
+    file_groups = {}
+    for filename in all_files:
+        _, ext = os.path.splitext(filename)
+        if ext not in file_groups:
+            file_groups[ext] = []
+        file_groups[ext].append(filename)
+    
+    # 对每个组内的文件进行排序
+    sorted_groups = {}
+    for ext, files in file_groups.items():
+        sorted_groups[ext] = sort_filenames(files, sort_method)
     
     # 显示排序结果
     print(f"\n排序结果 ({sort_method}):")
     print("-" * 50)
-    for i, filename in enumerate(sorted_files, 1):
-        print(f"{i:3d}. {filename}")
+    for ext, files in sorted_groups.items():
+        print(f"\n扩展名 {ext if ext else '[无扩展名]'}:")
+        for i, filename in enumerate(files, 1):
+            print(f"  {i:3d}. {filename}")
     
-    # 询问是否重命名
-    rename = input("\n是否要按照此顺序重命名文件？(y/N): ").strip().lower()
+    # 询问是否重命名（默认改为y）
+    rename = input("\n是否要按照此顺序重命名文件？(Y/n，默认为y): ").strip().lower()
+    if rename == '':
+        rename = 'y'
     
     if rename == 'y':
         # 获取文件名前缀
         prefix = input("请输入文件名前缀（默认为空）: ").strip()
         
-        # 默认保留原扩展名，不再询问
-        keep_ext = True
+        # 获取文件名后缀
+        suffix = input("请输入文件名后缀（默认为空）: ").strip()
         
-        # 确认操作
-        confirm = input("确认执行重命名操作？此操作不可撤销！(y/N): ").strip().lower()
+        # 生成重命名预览
+        print("\n预览重命名结果:")
+        print("-" * 50)
+        rename_map = {}  # 存储旧文件名到新文件名的映射
+        
+        for ext, files in sorted_groups.items():
+            print(f"\n扩展名 {ext if ext else '[无扩展名]'}:")
+            for i, filename in enumerate(files, 1):
+                # 再次检查是否为排除文件（以防万一）
+                if is_excluded_file(filename):
+                    print(f"  跳过排除文件: {filename}")
+                    continue
+                    
+                # 构建新文件名（添加后缀支持）
+                new_name = f"{prefix}{i:03d}{suffix}{ext}"
+                rename_map[filename] = new_name
+                print(f"  {filename} -> {new_name}")
+        
+        # 检查是否有文件名冲突
+        conflicts = []
+        new_names = list(rename_map.values())
+        for old_name, new_name in rename_map.items():
+            if new_names.count(new_name) > 1:
+                conflicts.append(new_name)
+        
+        if conflicts:
+            print(f"\n警告: 检测到 {len(set(conflicts))} 个文件名冲突!")
+            for conflict in set(conflicts):
+                print(f"  冲突文件名: {conflict}")
+            print("重命名操作可能会导致文件覆盖，建议修改前缀或后缀。")
+        
+        # 确认操作（默认改为y）
+        confirm = input("\n确认执行重命名操作？此操作不可撤销！(Y/n，默认为y): ").strip().lower()
+        if confirm == '':
+            confirm = 'y'
+            
         if confirm != 'y':
             print("操作已取消。")
             return
         
         # 执行重命名
         success_count = 0
-        for i, filename in enumerate(sorted_files, 1):
-            # 再次检查是否为排除文件（以防万一）
-            if is_excluded_file(filename):
-                print(f"跳过排除文件: {filename}")
-                continue
-                
-            # 获取文件扩展名（默认保留原扩展名）
-            name, ext = os.path.splitext(filename)
-            if not ext:  # 如果没有扩展名
-                ext = ""
-            
-            # 构建新文件名
-            new_name = f"{prefix}{i:03d}{ext}"
-            
-            # 重命名文件
-            old_path = os.path.join(directory, filename)
+        for old_name, new_name in rename_map.items():
+            old_path = os.path.join(directory, old_name)
             new_path = os.path.join(directory, new_name)
             
             try:
-                # 检查新文件名是否已存在
-                if os.path.exists(new_path):
-                    print(f"警告: 目标文件已存在，跳过 {filename}")
+                # 检查新文件名是否已存在（除了自己重命名的情况）
+                if os.path.exists(new_path) and old_name != new_name:
+                    print(f"警告: 目标文件已存在，跳过 {old_name}")
                     continue
                     
                 os.rename(old_path, new_path)
-                print(f"重命名: {filename} -> {new_name}")
+                print(f"重命名: {old_name} -> {new_name}")
                 success_count += 1
             except Exception as e:
-                print(f"错误: 无法重命名 {filename} -> {new_name}: {str(e)}")
+                print(f"错误: 无法重命名 {old_name} -> {new_name}: {str(e)}")
         
         print(f"\n操作完成！成功重命名 {success_count} 个文件。")
 
